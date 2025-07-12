@@ -1,7 +1,10 @@
 /* || Slidehow */
 
 :host {
-    display: block;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     aspect-ratio: 2.4/1;
 }
 

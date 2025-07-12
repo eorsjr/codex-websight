@@ -1,6 +1,10 @@
 /* || Card related global styles */
 
 cxw-card .hero-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     aspect-ratio: 16/9;
     margin-left: -16px;
     margin-right: -16px;

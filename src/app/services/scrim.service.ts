@@ -10,7 +10,6 @@ export class ScrimService {
   public isVisible = signal(false); // Signal to track whether the scrim is visible
   public zIndex = signal(1); // Signal to store the current z-index of the scrim
 
-
   /**
    * Sets the z-index of the scrim.
    * @param value The z-index value to set.

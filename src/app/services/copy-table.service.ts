@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class CopyTableService {
 
   constructor() { }
+
   /**
    * Copies the given text to the clipboard.
    * @param text Text to copy to the clipboard
@@ -13,6 +14,7 @@ export class CopyTableService {
   copyText(text: string): void {
     navigator.clipboard.writeText(text);
   }
+  
   /**
    * Copies the content of the given HTML table element to the clipboard.
    * @param table HTMLTableElement to copy

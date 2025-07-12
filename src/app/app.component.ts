@@ -18,7 +18,7 @@ import { LightboxService } from './services/lightbox.service';
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'eui-web';
+  title = 'codex-websight';
 
   constructor(private router: Router, private themeService: ThemeService, private elevationService: ElevationService, private navigationService: NavigationService, private lightboxService: LightboxService) {
     this.router.events

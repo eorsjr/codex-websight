@@ -1,3 +1,27 @@
+# [2.0.0-alpha.2](https://github.com/eorsjr/codex-websight/compare/v2.0.0-alpha.1...v2.0.0-alpha.2) (2025-07-13)
+
+
+### Bug Fixes
+
+* **navigation:** :bug: hide scrim before closing the navigation rail ([15837c6](https://github.com/eorsjr/codex-websight/commit/15837c6e079e26343082e6e342e12204aa540fa6))
+
+
+### Features
+
+* :lipstick: update color tokens ([e8d49b2](https://github.com/eorsjr/codex-websight/commit/e8d49b24b6ae13f3813e0d40393db2aa9599be2c))
+* :sparkles: introduce basic dialog component ([6bf69f3](https://github.com/eorsjr/codex-websight/commit/6bf69f3bfcdd3b3a68ab068618615cc2b2f388e2))
+* **App Bar:** :sparkles: add basic dialogs to switch theme and font ([de85a3e](https://github.com/eorsjr/codex-websight/commit/de85a3e7636eecfea13d739477d760ea76c0c8ad))
+* **buttons:** :lipstick: update color animations ([df96d81](https://github.com/eorsjr/codex-websight/commit/df96d8136531f24d08a5b40c924181870dc8e907))
+* **buttons:** :sparkles: introduce FAB (floating action button) component ([7e5d629](https://github.com/eorsjr/codex-websight/commit/7e5d629fad20269adc0330267a68817cc662f2a9))
+* **FAB:** :sparkles: add scroll to top FAB ([e4f1d95](https://github.com/eorsjr/codex-websight/commit/e4f1d95f63186c7d4c76deaa6be23640d3a80efa))
+
+
+### BREAKING CHANGES
+
+* **App Bar:** Functions switchTheme() and switchFont() are replaced with switchToTheme() and switchToFont() in ThemeService. Intermediary functions in App Bar logic are also removed; use service functions directly instead.
+
+
+
 # [2.0.0-alpha.1](https://github.com/eorsjr/codex-websight/compare/v1.0.0...v2.0.0-alpha.1) (2025-07-10)
 
 

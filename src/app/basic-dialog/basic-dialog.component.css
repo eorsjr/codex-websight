@@ -1,0 +1,44 @@
+/* || Basic dialog */
+
+.basic-dialog {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    border: none;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--md-sys-color-surface-container-high);
+    box-shadow: var(--elevation-level-3);
+    border-radius: var(--md-sys-shape-corner-extra-large);
+    min-width: 280px;
+    max-width: 560px;
+    padding: 24px;
+}
+
+.basic-dialog .headline {
+    line-height: 32px;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    padding-bottom: 16px;
+    color: var(--md-sys-color-on-surface);
+}
+
+.basic-dialog .supporting-text {
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+    padding-bottom: 24px;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.basic-dialog .actions {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 8px;
+}

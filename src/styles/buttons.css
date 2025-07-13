@@ -25,3 +25,10 @@ button {
     cursor: pointer;
     outline: inherit;
 }
+
+/* || Basic dialog button */
+
+cxw-basic-dialog .button {
+    background-color: red;
+    margin: 0 !important;
+}

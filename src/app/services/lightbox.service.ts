@@ -28,7 +28,6 @@ export class LightboxService {
     this.lightboxOpen.set(true);
     this.scrimService.setZIndex(4);
     this.scrimService.isVisible.set(true);
-    this.scrollingService.disableScroll();
   }
 
   /**
@@ -38,7 +37,6 @@ export class LightboxService {
   public closeLightbox(): void {
     this.lightboxOpen.set(false);
     this.scrimService.isVisible.set(false);
-    this.scrollingService.enableScroll();
     this.currentIndex.set(0);
   }
 

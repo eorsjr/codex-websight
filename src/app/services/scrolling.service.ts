@@ -76,12 +76,13 @@ export class ScrollingService {
   }
 
   /**
-   * Toggles visibility of navigation and app bar based on scroll direction.
+   * Toggles visibility of navigation bar, app bar and fab based on scroll direction.
    * @returns {void}
    */
   public handleScrollVisibility(): void {
     const navComponent = document.querySelector('cxw-flexible-navigation-bar') as HTMLElement;
     const appBar = document.querySelector('.app-bar') as HTMLElement;
+    const fab = document.querySelector('.fab') as HTMLElement;
 
     const currentScrollPos = window.scrollY;
 
@@ -95,11 +96,14 @@ export class ScrollingService {
       if (window.innerWidth < 840) {
         if (currentScrollPos > this.prevScrollPos && currentScrollPos > 1) {
           appBar?.classList.add('remove');
+          fab?.classList.add('remove');
         } else if (currentScrollPos < this.prevScrollPos) {
           appBar?.classList.remove('remove');
+          fab?.classList.remove('remove');
         }
       } else {
         appBar?.classList.remove('remove');
+        fab?.classList.remove('remove');
       }
     }
 

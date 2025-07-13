@@ -152,6 +152,7 @@
 @media (min-width: 840px) {
   :host {
     width: 96px;
+    z-index: 2;
     margin-left: env(safe-area-inset-left);
     background-color: var(--md-sys-color-surface-container);
   }
@@ -161,7 +162,7 @@
   }
 
   :host .nav-items {
-    margin-top: calc(64px + 16px);
+    margin-top: calc(64px + 56px + 40px + 16px);
   }
 
   :host .nav-items .nav-item {

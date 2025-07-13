@@ -11,13 +11,9 @@ import { ScrimService } from '../services/scrim.service';
 })
 export class ScrimComponent {
 
-  private railOpen = false; // Tracks if the navigation rail is open
-
   constructor(private scrollingService: ScrollingService, public navService: NavigationService, public scrimService: ScrimService) {
     effect(() => {
-      this.railOpen = this.navService.navigationRailOpen();
-
-      if (this.railOpen) {
+      if (scrimService.isVisible()) {
         this.scrollingService.disableScroll();
       } else {
         this.scrollingService.enableScroll();

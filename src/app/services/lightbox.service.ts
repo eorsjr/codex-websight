@@ -39,6 +39,7 @@ export class LightboxService {
     this.lightboxOpen.set(false);
     this.scrimService.isVisible.set(false);
     this.scrollingService.enableScroll();
+    this.currentIndex.set(0);
   }
 
   /**

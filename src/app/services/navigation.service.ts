@@ -51,10 +51,12 @@ export class NavigationService {
     const rail = document.querySelector('cxw-navigation-rail');
 
     if (rail) {
+      if (this.navigationRailOpen()) {
+        this.scrimService.isVisible.set(false);
+      }
       this.navigationRailOpen.set(false);
       rail.classList.remove('show');
       this.elevationService.updateElevation();
-      this.scrimService.isVisible.set(false);
     }
   }
 

@@ -37,6 +37,7 @@ export class LightboxService {
   public closeLightbox(): void {
     this.lightboxOpen.set(false);
     this.scrimService.isVisible.set(false);
+    this.images.set([]);
     this.currentIndex.set(0);
   }
 

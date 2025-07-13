@@ -1,0 +1,207 @@
+/* || FAB */
+
+.fab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    right: calc(16px + env(safe-area-inset-right));
+    transform: translateY(0);
+}
+
+.fab.remove {
+    transform: translateY(400%);
+}
+
+/* For compact and medium window classes */
+@media screen and (max-width: 839px) {
+    .fab {
+        bottom: calc(64px + 16px);
+    }
+
+    /* For standalone mode */
+    @media (display-mode:standalone) {
+        .fab {
+            margin-bottom: env(safe-area-inset-bottom);
+        }
+    }
+}
+
+@media screen and (min-width: 840px) {
+    .fab {
+        z-index: 2;
+        top: calc(64px + 16px);
+        left: calc(20px + env(safe-area-inset-left));
+        bottom: initial;
+        right: initial;
+    }
+}
+
+/* || FAB - Size */
+
+.fab.base {
+    height: 56px;
+    width: 56px;
+    border-radius: var(--md-sys-shape-corner-large);
+}
+
+.fab.base .icon {
+    font-size: 24px;
+}
+
+.fab.medium {
+    height: 80px;
+    width: 80px;
+    border-radius: var(--md-sys-shape-corner-large-increased);
+}
+
+.fab.medium .icon {
+    font-size: 28px;
+}
+
+.fab.large {
+    height: 96px;
+    width: 96px;
+    border-radius: var(--md-sys-shape-corner-extra-large);
+}
+
+.fab.medium .icon {
+    font-size: 36px;
+}
+
+/* || FAB - Color */
+
+.fab.tonal-primary {
+    background-color: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+    box-shadow: var(--elevation-level-3);
+}
+
+.fab.tonal-secondary {
+    background-color: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+    box-shadow: var(--elevation-level-3);
+}
+
+.fab.tonal-tertiary {
+    background-color: var(--md-sys-color-tertiary-container);
+    color: var(--md-sys-color-on-tertiary-container);
+    box-shadow: var(--elevation-level-3);
+}
+
+.fab.primary {
+    background-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+    box-shadow: var(--elevation-level-3);
+}
+
+.fab.secondary {
+    background-color: var(--md-sys-color-secondary);
+    color: var(--md-sys-color-on-secondary);
+    box-shadow: var(--elevation-level-3);
+}
+
+.fab.tertiary {
+    background-color: var(--md-sys-color-tertiary);
+    color: var(--md-sys-color-on-tertiary);
+    box-shadow: var(--elevation-level-3);
+}
+
+/* || FAB - State */
+
+.fab {
+    transition: transform 0.5s ease, background-color 250ms ease-in-out, color 250ms ease-in-out, box-shadow 250ms ease-in-out;
+}
+
+@media (hover: none) {
+    .fab:active {
+        box-shadow: var(--elevation-level-4);
+        transition: none;
+    }
+
+    .fab.tonal-primary:active {
+        background-color: var(--md-sys-color-on-primary-container);
+    }
+
+    .fab.tonal-secondary:active {
+        background-color: var(--md-sys-color-on-secondary-container);
+    }
+
+    .fab.tonal-tertiary:active {
+        background-color: var(--md-sys-color-on-tertiary-container);
+    }
+
+    .fab.primary:active {
+        background-color: var(--md-sys-color-on-primary);
+    }
+
+    .fab.secondary:active {
+        background-color: var(--md-sys-color-on-secondary);
+    }
+
+    .fab.tertiary:active {
+        background-color: var(--md-sys-color-on-tertiary);
+    }
+
+    .fab.tonal-primary:active,
+    .fab.tonal-secondary:active,
+    .fab.tonal-tertiary:active {
+        color: var(--md-sys-color-inverse-on-surface);
+    }
+
+    .fab.primary:active,
+    .fab.secondary:active,
+    .fab.tertiary:active {
+        color: var(--md-sys-color-on-surface);
+    }
+
+}
+
+@media (hover: hover) {
+    .fab:hover {
+        box-shadow: var(--elevation-level-4);
+    }
+
+    .fab.tonal-primary:hover {
+        background-color: var(--md-sys-color-on-primary-container);
+    }
+
+    .fab.tonal-secondary:hover {
+        background-color: var(--md-sys-color-on-secondary-container);
+    }
+
+    .fab.tonal-tertiary:hover {
+        background-color: var(--md-sys-color-on-tertiary-container);
+    }
+
+    .fab.primary:hover {
+        background-color: var(--md-sys-color-on-primary);
+    }
+
+    .fab.secondary:hover {
+        background-color: var(--md-sys-color-on-secondary);
+    }
+
+    .fab.tertiary:hover {
+        background-color: var(--md-sys-color-on-tertiary);
+    }
+
+    .fab.tonal-primary:hover,
+    .fab.tonal-secondary:hover,
+    .fab.tonal-tertiary:hover {
+        color: var(--md-sys-color-inverse-on-surface);
+    }
+
+    .fab.primary:hover,
+    .fab.secondary:hover,
+    .fab.tertiary:hover {
+        color: var(--md-sys-color-on-surface);
+    }
+
+    .fab:active {
+        background-color: var(--md-sys-color-surface) !important;
+        color: var(--md-sys-color-on-surface) !important;
+        transition: none;
+    }
+}

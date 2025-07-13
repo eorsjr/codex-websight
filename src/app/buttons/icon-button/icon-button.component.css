@@ -156,9 +156,27 @@
     }
 
     .icon-button:active {
-        background-color: var(--md-sys-color-inverse-surface) !important;
-        color: var(--md-sys-color-inverse-on-surface) !important;
         transition: none;
+    }
+
+    .icon-button.default.filled:active {
+        background-color: var(--md-sys-color-on-primary);
+        color: var(--md-sys-color-on-surface);
+    }
+
+    .icon-button.default.tonal:active {
+        background-color: var(--md-sys-color-on-secondary-container);
+        color: var(--md-sys-color-inverse-on-surface);
+    }
+
+    .icon-button.default.outlined:active {
+        background-color: var(--md-sys-color-on-surface-variant);
+        color: var(--md-sys-color-inverse-on-surface);
+    }
+
+    .icon-button.default.standard:active {
+        background-color: var(--md-sys-color-on-surface-variant);
+        color: var(--md-sys-color-inverse-on-surface);
     }
 }
 
@@ -167,9 +185,24 @@
         transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
     }
 
-    .icon-button:hover {
-        background-color: var(--md-sys-color-inverse-surface) !important;
-        color: var(--md-sys-color-inverse-on-surface) !important;
+    .icon-button.default.filled:hover {
+        background-color: var(--md-sys-color-on-primary);
+        color: var(--md-sys-color-on-surface);
+    }
+
+    .icon-button.default.tonal:hover {
+        background-color: var(--md-sys-color-on-secondary-container);
+        color: var(--md-sys-color-inverse-on-surface);
+    }
+
+    .icon-button.default.outlined:hover {
+        background-color: var(--md-sys-color-on-surface-variant);
+        color: var(--md-sys-color-inverse-on-surface);
+    }
+
+    .icon-button.default.standard:hover {
+        background-color: var(--md-sys-color-on-surface-variant);
+        color: var(--md-sys-color-inverse-on-surface);
     }
 
     .icon-button:active {

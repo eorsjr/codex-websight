@@ -35,6 +35,7 @@
   align-items: center;
   background: none;
   cursor: pointer;
+  color: var(--md-sys-color-on-surface-variant);
 }
 
 :host .nav-item .label-text {
@@ -42,7 +43,6 @@
   line-height: 16px;
   font-weight: 500;
   letter-spacing: 0.5px;
-  color: var(--md-sys-color-on-surface-variant);
 }
 
 :host .nav-item#active-indicator .label-text {
@@ -54,7 +54,6 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  color: var(--md-sys-color-on-surface-variant);
 }
 
 :host .nav-item#active-indicator .icon {
@@ -93,7 +92,6 @@
     height: 32px;
     width: 56px;
     border-radius: var(--md-sys-shape-corner-full);
-    color: var(--md-sys-color-on-surface-variant);
   }
 
   :host .nav-item#active-indicator .icon {
@@ -109,14 +107,14 @@
       transition: color 250ms ease-in-out;
     }
 
-    :host .nav-item:active .icon {
-      background-color: var(--md-sys-color-inverse-surface) !important;
-      color: var(--md-sys-color-inverse-on-surface) !important;
+    :host .nav-item:not(#active-indicator):active .icon {
+      background-color: var(--md-sys-color-on-secondary-container);
+      color: var(--md-sys-color-inverse-on-surface);
       transition: none;
     }
 
-    :host .nav-item:active .label-text {
-      color: var(--md-sys-color-on-surface) !important;
+    :host .nav-item:not(#active-indicator):active .label-text {
+      color: var(--md-sys-color-on-surface);
       transition: none;
     }
   }
@@ -130,23 +128,23 @@
       transition: color 250ms ease-in-out;
     }
 
-    :host .nav-item:hover .icon {
-      background-color: var(--md-sys-color-inverse-surface) !important;
-      color: var(--md-sys-color-inverse-on-surface) !important;
+    :host .nav-item:not(#active-indicator):hover .icon {
+      background-color: var(--md-sys-color-on-secondary-container);
+      color: var(--md-sys-color-inverse-on-surface);
     }
 
-    :host .nav-item:hover .label-text {
-      color: var(--md-sys-color-on-surface) !important;
+    :host .nav-item:not(#active-indicator):hover .label-text {
+      color: var(--md-sys-color-on-surface);
     }
 
-    :host .nav-item:active .icon {
-      background-color: var(--md-sys-color-surface) !important;
-      color: var(--md-sys-color-on-surface) !important;
+    :host .nav-item:not(#active-indicator):active .icon {
+      background-color: var(--md-sys-color-surface);
+      color: var(--md-sys-color-on-surface);
       transition: none;
     }
 
-    :host .nav-item:active .label-text {
-      color: var(--md-sys-color-on-surface) !important;
+    :host .nav-item:not(#active-indicator):active .label-text {
+      color: var(--md-sys-color-on-surface);
       transition: none;
     }
   }
@@ -178,58 +176,33 @@
 
   :host .nav-item .icon {
     height: 32px;
-    color: var(--md-sys-color-on-surface-variant);
   }
 
   @media (hover:none) {
     :host .nav-item {
-      transition: background-color 250ms ease-in-out;
+      transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
     }
 
-    :host .nav-item .icon,
-    :host .nav-item .label-text {
-      transition: color 250ms ease-in-out;
-    }
-
-    :host .nav-item:active {
-      background-color: var(--md-sys-color-inverse-surface) !important;
-      transition: none;
-    }
-
-    :host .nav-item:active .icon,
-    :host .nav-item:active .label-text {
-      color: var(--md-sys-color-inverse-on-surface) !important;
+    :host .nav-item:not(#active-indicator):active {
+      background-color: var(--md-sys-color-on-secondary-container);
+      color: var(--md-sys-color-inverse-on-surface);
       transition: none;
     }
   }
 
   @media (hover:hover) {
     :host .nav-item {
-      transition: background-color 250ms ease-in-out;
+      transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
     }
 
-    :host .nav-item .icon,
-    :host .nav-item .label-text {
-      transition: color 250ms ease-in-out;
+    :host .nav-item:not(#active-indicator):hover {
+      background-color: var(--md-sys-color-on-secondary-container);
+      color: var(--md-sys-color-inverse-on-surface);
     }
 
-    :host .nav-item:hover {
-      background-color: var(--md-sys-color-inverse-surface) !important;
-    }
-
-    :host .nav-item:hover .icon,
-    :host .nav-item:hover .label-text {
-      color: var(--md-sys-color-inverse-on-surface) !important;
-    }
-
-    :host .nav-item:active {
-      background-color: var(--md-sys-color-surface) !important;
-      transition: none;
-    }
-
-    :host .nav-item:active .icon,
-    :host .nav-item:active .label-text {
-      color: var(--md-sys-color-on-surface) !important;
+    :host .nav-item:not(#active-indicator):active {
+      background-color: var(--md-sys-color-surface);
+      color: var(--md-sys-color-on-surface);
       transition: none;
     }
   }

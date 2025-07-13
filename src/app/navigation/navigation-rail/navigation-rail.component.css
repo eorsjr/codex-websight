@@ -38,9 +38,6 @@
   cursor: pointer;
   height: 64px;
   flex-shrink: 0;
-}
-
-:host .nav-items .nav-item .label-text {
   color: var(--md-sys-color-on-surface-variant);
 }
 
@@ -49,7 +46,6 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  color: var(--md-sys-color-on-surface-variant);
 }
 
 :host .nav-items .nav-item#active-indicator .icon {
@@ -109,57 +105,29 @@
 
   @media (hover:none) {
     :host .nav-items .nav-item {
-      transition: background-color 250ms ease-in-out;
+      transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
     }
 
-    :host .nav-items .nav-item .icon,
-    :host .nav-items .nav-item .label-text {
-      transition: color 250ms ease-in-out;
-    }
-
-    :host .nav-items .nav-item:active {
-      background-color: var(--md-sys-color-inverse-surface) !important;
-      transition: none;
-    }
-
-    :host .nav-items .nav-item:active .icon {
-      color: var(--md-sys-color-inverse-on-on-surface) !important;
-      transition: none;
-    }
-
-    :host .nav-items .nav-item:active .label-text {
-      color: var(--md-sys-color-inverse-on-surface) !important;
+    :host .nav-items .nav-item:not(#active-indicator):active {
+      background-color: var(--md-sys-color-on-secondary-container);
+      color: var(--md-sys-color-inverse-on-surface);
       transition: none;
     }
   }
 
   @media (hover:hover) {
     :host .nav-items .nav-item {
-      transition: background-color 250ms ease-in-out;
+      transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
     }
 
-    :host .nav-items .nav-item .icon,
-    :host .nav-items .nav-item .label-text {
-      transition: color 250ms ease-in-out;
+    :host .nav-items .nav-item:not(#active-indicator):hover {
+      background-color: var(--md-sys-color-on-secondary-container);
+      color: var(--md-sys-color-inverse-on-surface);
     }
 
-    :host .nav-items .nav-item:hover {
-      background-color: var(--md-sys-color-inverse-surface) !important;
-    }
-
-    :host .nav-items .nav-item:hover .icon,
-    :host .nav-items .nav-item:hover .label-text {
-      color: var(--md-sys-color-inverse-on-surface) !important;
-    }
-
-    :host .nav-items .nav-item:active {
-      background-color: var(--md-sys-color-surface) !important;
-      transition: none;
-    }
-
-    :host .nav-items .nav-item:active .icon,
-    :host .nav-items .nav-item:active .label-text {
-      color: var(--md-sys-color-on-surface) !important;
+    :host .nav-items .nav-item:not(#active-indicator):active {
+      background-color: var(--md-sys-color-surface);
+      color: var(--md-sys-color-on-surface);
       transition: none;
     }
   }
@@ -235,14 +203,14 @@
       transition: color 250ms ease-in-out;
     }
 
-    :host .nav-item:active .icon {
-      background-color: var(--md-sys-color-inverse-surface) !important;
-      color: var(--md-sys-color-inverse-on-surface) !important;
+    :host .nav-item:not(#active-indicator):active .icon {
+      background-color: var(--md-sys-color-on-secondary-container);
+      color: var(--md-sys-color-inverse-on-surface);
       transition: none;
     }
 
-    :host .nav-item:active .label-text {
-      color: var(--md-sys-color-on-surface) !important;
+    :host .nav-item:not(#active-indicator):active .label-text {
+      color: var(--md-sys-color-on-surface);
       transition: none;
     }
   }
@@ -256,23 +224,23 @@
       transition: color 250ms ease-in-out;
     }
 
-    :host .nav-item:hover .icon {
-      background-color: var(--md-sys-color-inverse-surface) !important;
-      color: var(--md-sys-color-inverse-on-surface) !important;
+    :host .nav-item:not(#active-indicator):hover .icon {
+      background-color: var(--md-sys-color-on-secondary-container);
+      color: var(--md-sys-color-inverse-on-surface);
     }
 
-    :host .nav-item:hover .label-text {
-      color: var(--md-sys-color-on-surface) !important;
+    :host .nav-item:not(#active-indicator):hover .label-text {
+      color: var(--md-sys-color-on-surface);
     }
 
-    :host .nav-item:active .icon {
-      background-color: var(--md-sys-color-surface) !important;
-      color: var(--md-sys-color-on-surface) !important;
+    :host .nav-item:not(#active-indicator):active .icon {
+      background-color: var(--md-sys-color-surface);
+      color: var(--md-sys-color-on-surface);
       transition: none;
     }
 
-    :host .nav-item:active .label-text {
-      color: var(--md-sys-color-on-surface) !important;
+    :host .nav-item:not(#active-indicator):active .label-text {
+      color: var(--md-sys-color-on-surface);
       transition: none;
     }
   }

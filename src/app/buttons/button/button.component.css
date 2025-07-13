@@ -85,17 +85,17 @@
     box-shadow: var(--elevation-level-1);
 }
 
-.button.filled {
+.button.default.filled {
     background-color: var(--md-sys-color-primary);
     color: var(--md-sys-color-on-primary);
 }
 
-.button.tonal {
+.button.default.tonal {
     background-color: var(--md-sys-color-secondary-container);
     color: var(--md-sys-color-on-secondary-container);
 }
 
-.button.outlined {
+.button.default.outlined {
     background: none;
     border: 1px var(--md-sys-color-outline) solid;
     color: var(--md-sys-color-on-surface-variant);
@@ -173,9 +173,32 @@
     }
 
     .button:active {
-        background-color: var(--md-sys-color-inverse-surface) !important;
-        color: var(--md-sys-color-inverse-on-surface) !important;
         transition: none;
+    }
+
+    .button.default.elevated:active {
+        background-color: var(--md-sys-color-primary);
+        color: var(--md-sys-color-inverse-on-surface);
+    }
+
+    .button.default.filled:active {
+        background-color: var(--md-sys-color-on-primary);
+        color: var(--md-sys-color-on-surface);
+    }
+
+    .button.default.tonal:active {
+        background-color: var(--md-sys-color-on-secondary-container);
+        color: var(--md-sys-color-inverse-on-surface);
+    }
+
+    .button.default.outlined:active {
+        background-color: var(--md-sys-color-on-surface-variant);
+        color: var(--md-sys-color-inverse-on-surface);
+    }
+
+    .button.default.text:active {
+        background-color: var(--md-sys-color-primary);
+        color: var(--md-sys-color-inverse-on-surface);
     }
 
     .button.xs:active,
@@ -198,9 +221,29 @@
         transition: background-color 250ms ease-in-out, color 250ms ease-in-out, border-radius 250ms ease-in-out;
     }
 
-    .button:hover {
-        background-color: var(--md-sys-color-inverse-surface) !important;
-        color: var(--md-sys-color-inverse-on-surface) !important;
+    .button.default.elevated:hover {
+        background-color: var(--md-sys-color-primary);
+        color: var(--md-sys-color-inverse-on-surface);
+    }
+
+    .button.default.filled:hover {
+        background-color: var(--md-sys-color-on-primary);
+        color: var(--md-sys-color-on-surface);
+    }
+
+    .button.default.tonal:hover {
+        background-color: var(--md-sys-color-on-secondary-container);
+        color: var(--md-sys-color-inverse-on-surface);
+    }
+
+    .button.default.outlined:hover {
+        background-color: var(--md-sys-color-on-surface-variant);
+        color: var(--md-sys-color-inverse-on-surface);
+    }
+
+    .button.default.text:hover {
+        background-color: var(--md-sys-color-primary);
+        color: var(--md-sys-color-inverse-on-surface);
     }
 
     .button:active {

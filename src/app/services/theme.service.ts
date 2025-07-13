@@ -6,11 +6,7 @@ import { signal } from '@angular/core';
 })
 export class ThemeService {
 
-  // Define available themes and fonts
-  private themes = ["silver", "green", "yellow", "orange", "pink", "baseline", "blue"];
-  private fonts = ["Noto Sans", "Anta", "Limelight", "Pattaya"];
-  private themeIndex = 0;
-  private fontIndex = 0;
+  private themes = ["silver", "green", "yellow", "orange", "pink", "baseline", "blue"]; // Available themes
 
   public isDarkMode = signal(document.body.classList.contains('dark')); // Signal to track whether the current color scheme is dark mode.
 
@@ -19,8 +15,7 @@ export class ThemeService {
  * @returns {void}
  */
   public setInitialTheme(): void {
-    const selectedTheme = this.getStoredOrDefault("theme", this.themes[this.themeIndex]);
-    this.themeIndex = this.themes.indexOf(selectedTheme);
+    const selectedTheme = this.getStoredOrDefault("theme", 'silver');
     document.body.className = selectedTheme;
   }
 
@@ -30,8 +25,7 @@ export class ThemeService {
  * @returns {void}
  */
   public setInitialFont(): void {
-    const selectedFont = this.getStoredOrDefault("font", this.fonts[this.fontIndex]);
-    this.fontIndex = this.fonts.indexOf(selectedFont);
+    const selectedFont = this.getStoredOrDefault("font", 'Noto Sans');
     setTimeout(() => {
       this.applyFont(selectedFont);
     });
@@ -56,13 +50,12 @@ export class ThemeService {
   }
 
   /**
- * Switches to the next theme in the list and updates local storage.
- * Also updates the browser's theme color meta tag.
- * @returns {void}
- */
-  public switchTheme(): void {
-    this.themeIndex = (this.themeIndex + 1) % this.themes.length;
-    const theme = this.themes[this.themeIndex];
+   * Switches to the desireed theme and updates local storage.
+   * Also updates the browser's theme color meta tag.
+   * @param theme Desired theme.
+   * @returns {void}
+   */
+  public switchToTheme(theme: string): void {
     document.body.classList.remove(...this.themes);
     document.body.classList.add(theme);
     this.setLocalStorage("theme", theme);
@@ -70,13 +63,11 @@ export class ThemeService {
   }
 
   /**
-  * Switches to the next font in the list and updates local storage.
-  * @returns {void}
-  */
-  public switchFont(): void {
-    this.fontIndex = (this.fontIndex + 1) % this.fonts.length;
-
-    const font = this.fonts[this.fontIndex];
+   * Switches to the desired font and updates local storage.
+   * @param font Desired font.
+   * @returns {void}
+   */
+  public switchToFont(font: string): void {
     this.applyFont(font);
     this.setLocalStorage("font", font);
   }

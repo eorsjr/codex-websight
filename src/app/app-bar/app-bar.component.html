@@ -2,8 +2,7 @@
     <cxw-icon-button id="menu-button" size="m" color="standard"
         icon="{{ navService.navigationRailOpen() ? 'menu_open' : 'menu' }}"
         [attr.aria-label]="navService.navigationRailOpen() ? 'Close Menu' : 'Open Menu'"
-        (click)="navService.toggleNavigationRail()">
-    </cxw-icon-button>
+        (click)="navService.toggleNavigationRail()" />
     <div class="text-container">
         <div id="headline">codeX WebSight</div>
         <div id="subtitle">Template</div>
@@ -12,13 +11,45 @@
         <cxw-icon-button id="color-scheme-button" size="s" color="standard"
             icon="{{ themeService.isDarkMode() ? 'light_mode' : 'dark_mode' }}"
             [attr.aria-label]="themeService.isDarkMode() ? 'Switch to Light Mode' : 'Switch to Dark Mode'"
-            (click)="toggleColorScheme()">
-        </cxw-icon-button>
+            (click)="themeService.toggleColorScheme()" />
         <cxw-icon-button id="palette-button" size="s" color="standard" icon="palette" aria-label="Toggle Color Palette"
-            (click)="switchTheme()">
-        </cxw-icon-button>
+            (click)="colorPaletteDialog.openDialog()" />
         <cxw-icon-button id="font-button" size="s" color="standard" icon="brand_family" aria-label="Toggle Font"
-            (click)="switchFont()">
-        </cxw-icon-button>
+            (click)="fontDialog.openDialog()" />
     </div>
 </header>
+
+<cxw-basic-dialog #colorPaletteDialog>
+    <ng-container headline>Switch Color Palette</ng-container>
+    <ng-container supporting-text>Choose your color palette.</ng-container>
+    <ng-container actions>
+        <cxw-button shape="square" size="xs" color="text" label="Silver"
+            (click)="themeService.switchToTheme('silver');" />
+        <cxw-button shape="square" size="xs" color="text" label="Green"
+            (click)="themeService.switchToTheme('green');" />
+        <cxw-button shape="square" size="xs" color="text" label="Yellow"
+            (click)="themeService.switchToTheme('yellow')" />
+        <cxw-button shape="square" size="xs" color="text" label="Orange"
+            (click)="themeService.switchToTheme('orange')" />
+        <cxw-button shape="square" size="xs" color="text" label="Pink" (click)="themeService.switchToTheme('pink')" />
+        <cxw-button shape="square" size="xs" color="text" label="Baseline"
+            (click)="themeService.switchToTheme('baseline')" />
+        <cxw-button shape="square" size="xs" color="text" label="Blue" (click)="themeService.switchToTheme('blue')" />
+        <cxw-button shape="square" size="xs" color="text" label="Close" (click)="colorPaletteDialog.closeDialog()" />
+    </ng-container>
+</cxw-basic-dialog>
+
+<cxw-basic-dialog #fontDialog>
+    <ng-container headline>Switch Font</ng-container>
+    <ng-container supporting-text>Choose your font.</ng-container>
+    <ng-container actions>
+        <cxw-button shape="square" size="xs" color="text" label="Noto Sans"
+            (click)="themeService.switchToFont('Noto Sans');" />
+        <cxw-button shape="square" size="xs" color="text" label="Anta" (click)="themeService.switchToFont('Anta');" />
+        <cxw-button shape="square" size="xs" color="text" label="Limelight"
+            (click)="themeService.switchToFont('Limelight');" />
+        <cxw-button shape="square" size="xs" color="text" label="Pattaya"
+            (click)="themeService.switchToFont('Pattaya');" />
+        <cxw-button shape="square" size="xs" color="text" label="Close" (click)="fontDialog.closeDialog()" />
+    </ng-container>
+</cxw-basic-dialog>

@@ -1,3 +1,15 @@
+# [2.0.0-beta.1](https://github.com/eorsjr/codex-websight/compare/v2.0.0-alpha.2...v2.0.0-beta.1) (2025-07-15)
+
+
+### Bug Fixes
+
+* **lightbox:** :bug: remove scroll control from lightbox service ([07954e8](https://github.com/eorsjr/codex-websight/commit/07954e8faeec678aa9aed48ede69e249fda8ae59))
+* **lightbox:** :bug: reset current image index on lightbox close ([b6dffac](https://github.com/eorsjr/codex-websight/commit/b6dffac55c44c0f486b1b61ffe9f6d6038c682c8))
+* **lightbox:** :bug: reset images array on lightbox close ([2da159a](https://github.com/eorsjr/codex-websight/commit/2da159a3a8737bb1819fdefcfe969017382548a7))
+* **scrim:** :bug: toggle scrolling based on scrim visibility ([e8528c2](https://github.com/eorsjr/codex-websight/commit/e8528c21fce9bb3c4e8df5b16f2e04203f28606b))
+
+
+
 # [2.0.0-alpha.2](https://github.com/eorsjr/codex-websight/compare/v2.0.0-alpha.1...v2.0.0-alpha.2) (2025-07-13)
 
 

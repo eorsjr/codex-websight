@@ -117,7 +117,7 @@ export class ThemeService {
  * @param {string} font - The font family to apply.
  */
   private applyFont(font: string): void {
-    const headers = document.querySelectorAll("h1, h2, h3, h4, h5, h6, .headline");
+    const headers = document.querySelectorAll("h1, h2, h3, h4, h5, h6, .basic-dialog__headline");
     headers.forEach(header => {
       if (header instanceof HTMLElement) {
         header.style.fontFamily = font;

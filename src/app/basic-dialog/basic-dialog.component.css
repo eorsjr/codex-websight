@@ -18,7 +18,7 @@
     padding: 24px;
 }
 
-.basic-dialog .headline {
+.basic-dialog__headline {
     line-height: 32px;
     font-size: 24px;
     font-weight: 400;
@@ -27,7 +27,7 @@
     color: var(--md-sys-color-on-surface);
 }
 
-.basic-dialog .supporting-text {
+.basic-dialog__supporting-text {
     line-height: 20px;
     font-size: 14px;
     font-weight: 400;
@@ -36,7 +36,7 @@
     color: var(--md-sys-color-on-surface-variant);
 }
 
-.basic-dialog .actions {
+.basic-dialog__actions {
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;

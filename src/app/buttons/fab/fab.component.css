@@ -40,69 +40,69 @@
 
 /* || FAB - Size */
 
-.fab.base {
+.fab--size-base {
     height: 56px;
     width: 56px;
     border-radius: var(--md-sys-shape-corner-large);
 }
 
-.fab.base .icon {
+.fab--size-base .fab__icon {
     font-size: 24px;
 }
 
-.fab.medium {
+.fab--size-medium {
     height: 80px;
     width: 80px;
     border-radius: var(--md-sys-shape-corner-large-increased);
 }
 
-.fab.medium .icon {
+.fab--size-medium .fab__icon {
     font-size: 28px;
 }
 
-.fab.large {
+.fab--size-large {
     height: 96px;
     width: 96px;
     border-radius: var(--md-sys-shape-corner-extra-large);
 }
 
-.fab.medium .icon {
+.fab--size-medium .fab__icon {
     font-size: 36px;
 }
 
 /* || FAB - Color */
 
-.fab.tonal-primary {
+.fab--color-tonal-primary {
     background-color: var(--md-sys-color-primary-container);
     color: var(--md-sys-color-on-primary-container);
     box-shadow: var(--elevation-level-3);
 }
 
-.fab.tonal-secondary {
+.fab--color-tonal-secondary {
     background-color: var(--md-sys-color-secondary-container);
     color: var(--md-sys-color-on-secondary-container);
     box-shadow: var(--elevation-level-3);
 }
 
-.fab.tonal-tertiary {
+.fab--color-tonal-tertiary {
     background-color: var(--md-sys-color-tertiary-container);
     color: var(--md-sys-color-on-tertiary-container);
     box-shadow: var(--elevation-level-3);
 }
 
-.fab.primary {
+.fab--color-primary {
     background-color: var(--md-sys-color-primary);
     color: var(--md-sys-color-on-primary);
     box-shadow: var(--elevation-level-3);
 }
 
-.fab.secondary {
+.fab--color-secondary {
     background-color: var(--md-sys-color-secondary);
     color: var(--md-sys-color-on-secondary);
     box-shadow: var(--elevation-level-3);
 }
 
-.fab.tertiary {
+.fab--color-tertiary {
     background-color: var(--md-sys-color-tertiary);
     color: var(--md-sys-color-on-tertiary);
     box-shadow: var(--elevation-level-3);
@@ -120,39 +120,39 @@
         transition: none;
     }
 
-    .fab.tonal-primary:active {
+    .fab--color-tonal-primary:active {
         background-color: var(--md-sys-color-on-primary-container);
     }
 
-    .fab.tonal-secondary:active {
+    .fab--color-tonal-secondary:active {
         background-color: var(--md-sys-color-on-secondary-container);
     }
 
-    .fab.tonal-tertiary:active {
+    .fab--color-tonal-tertiary:active {
         background-color: var(--md-sys-color-on-tertiary-container);
     }
 
-    .fab.primary:active {
+    .fab--color-primary:active {
         background-color: var(--md-sys-color-on-primary);
     }
 
-    .fab.secondary:active {
+    .fab--color-secondary:active {
         background-color: var(--md-sys-color-on-secondary);
     }
 
-    .fab.tertiary:active {
+    .fab--color-tertiary:active {
         background-color: var(--md-sys-color-on-tertiary);
     }
 
-    .fab.tonal-primary:active,
-    .fab.tonal-secondary:active,
+    .fab--color-tonal-primary:active,
+    .fab--color-tonal-secondary:active,
     .fab.tonal-tertiary:active {
         color: var(--md-sys-color-inverse-on-surface);
     }
 
-    .fab.primary:active,
-    .fab.secondary:active,
-    .fab.tertiary:active {
+    .fab--color-primary:active,
+    .fab--color-secondary:active,
+    .fab--color-tertiary:active {
         color: var(--md-sys-color-on-surface);
     }
 
@@ -163,39 +163,39 @@
         box-shadow: var(--elevation-level-4);
     }
 
-    .fab.tonal-primary:hover {
+    .fab--color-tonal-primary:hover {
         background-color: var(--md-sys-color-on-primary-container);
     }
 
-    .fab.tonal-secondary:hover {
+    .fab--color-tonal-secondary:hover {
         background-color: var(--md-sys-color-on-secondary-container);
     }
 
-    .fab.tonal-tertiary:hover {
+    .fab--color-tonal-tertiary:hover {
         background-color: var(--md-sys-color-on-tertiary-container);
     }
 
-    .fab.primary:hover {
+    .fab--color-primary:hover {
         background-color: var(--md-sys-color-on-primary);
     }
 
-    .fab.secondary:hover {
+    .fab--color-secondary:hover {
         background-color: var(--md-sys-color-on-secondary);
     }
 
-    .fab.tertiary:hover {
+    .fab--color-tertiary:hover {
         background-color: var(--md-sys-color-on-tertiary);
     }
 
-    .fab.tonal-primary:hover,
-    .fab.tonal-secondary:hover,
-    .fab.tonal-tertiary:hover {
+    .fab--color-tonal-primary:hover,
+    .fab--color-tonal-secondary:hover,
+    .fab--color-tonal-tertiary:hover {
         color: var(--md-sys-color-inverse-on-surface);
     }
 
-    .fab.primary:hover,
-    .fab.secondary:hover,
-    .fab.tertiary:hover {
+    .fab--color-primary:hover,
+    .fab--color-secondary:hover,
+    .fab--color-tertiary:hover {
         color: var(--md-sys-color-on-surface);
     }
 

@@ -1,8 +1,8 @@
-<button [class]="classes.join(' ')">
+<button [class]="classes">
   <ng-container *ngIf="icon">
-    <span class="material-symbols-outlined icon">{{ icon }}</span>
+    <span class="material-symbols-outlined button__icon">{{ icon }}</span>
   </ng-container>
   <ng-container *ngIf="label">
-    <span class="label-text">{{ label }}</span>
+    <span class="button__label-text">{{ label }}</span>
   </ng-container>
 </button>

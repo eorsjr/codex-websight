@@ -17,14 +17,13 @@ export class ButtonComponent {
   @Input() label: string = 'Label text';
   @Input() icon?: string;
 
-  get classes(): string[] {
-    return [
-      "button",
-      this.type,
-      this.size,
-      this.shape,
-      this.color,
-      this.icon ? 'icon' : ''
-    ];
+  get classes(): string {
+    const classes: string[] = ["button"];
+
+    classes.push(`button--size-${this.size}`);
+    classes.push(`button--shape-${this.shape}`);
+    classes.push(`button--color-${this.color}`);
+
+    return classes.join(' ');
   }
 }

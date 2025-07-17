@@ -11,19 +11,19 @@ export class IconButtonComponent {
   @Input() type = 'default';
   @Input() size: 'xs' | 's' | 'm' | 'l' | 'xl' = 's';
   @Input() shape: 'round' | 'square' = 'round';
-  @Input() width: 'narrow-width' | 'default-width' | 'wide-width' = 'default-width';
+  @Input() width: 'narrow' | 'default' | 'wide' = 'default';
   @Input() color: 'filled' | 'tonal' | 'outlined' | 'standard' = 'filled';
   @Input() icon: string = 'grid_guides';
 
-  get classes(): string[] {
-    return [
-      "icon-button",
-      this.type,
-      this.size,
-      this.shape,
-      this.width,
-      this.color,
-      this.icon ? 'icon' : ''
-    ];
+
+  get classes(): string {
+    const classes: string[] = ["icon-button"];
+
+    classes.push(`icon-button--size-${this.size}`);
+    classes.push(`icon-button--shape-${this.shape}`);
+    classes.push(`icon-button--width-${this.width}`);
+    classes.push(`icon-button--color-${this.color}`);
+
+    return classes.join(' ');
   }
 }

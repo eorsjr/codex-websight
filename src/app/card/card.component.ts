@@ -11,8 +11,9 @@ import { CommonModule } from '@angular/common';
 })
 export class CardComponent {
   @Input() variant: 'elevated' | 'filled' | 'outlined' = 'elevated';
-  
-  @HostBinding('class') get hostClass() {
-    return this.variant;
+
+  @HostBinding('class')
+  get hostClasses(): string {
+    return `card card--variant-${this.variant}`;
   }
 }

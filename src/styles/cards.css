@@ -1,6 +1,6 @@
 /* || Card related global styles */
 
-cxw-card .hero-content {
+cxw-card .card__hero-content {
     position: relative;
     display: flex;
     justify-content: center;
@@ -10,7 +10,7 @@ cxw-card .hero-content {
     margin-right: -16px;
 }
 
-cxw-card .hero-content img {
+cxw-card .card__hero-content img {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -23,32 +23,32 @@ cxw-card img {
 
 /* || Side-by-side */
 
-.side-by-side {
+.card__side-by-side {
     display: flex;
     justify-content: center;
 }
 
 /* For compact, medium and expanded window classes */
 @media (max-width: 1199px) {
-    .side-by-side {
+    .card__side-by-side {
         flex-direction: column;
     }
 
-    .side-by-side .left-side,
-    .side-by-side .right-side {
+    .card__side-by-side-left,
+    .card__side-by-side-right {
         width: 100%;
     }
 }
 
 /* For large and extra-large window classes */
 @media (min-width:1200px) {
-    .side-by-side .left-side {
+    .card__side-by-side-left {
         margin-right: auto;
         width: 47.5%;
         max-width: 47.5%;
     }
 
-    .side-by-side .right-side {
+    .card__side-by-side-right {
         margin-left: auto;
         width: 47.5%;
         max-width: 47.5%;

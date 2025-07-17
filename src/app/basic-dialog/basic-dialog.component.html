@@ -1,11 +1,14 @@
 <dialog class="basic-dialog" [style.display]="isOpen() ? 'flex' : 'none'">
-    <div class="headline">
+
+    <div class="basic-dialog__headline">
         <ng-content select="[headline]">Headline</ng-content>
     </div>
-    <div class="supporting-text">
+
+    <div class="basic-dialog__supporting-text">
         <ng-content select="[supporting-text]">Supporting text.</ng-content>
     </div>
-    <div class="actions">
+    
+    <div class="basic-dialog__actions">
         <ng-content select="[actions]">
             <cxw-button shape="square" size="xs" color="text" label="Action 2" />
             <cxw-button shape="square" size="xs" color="text" label="Action 1" />

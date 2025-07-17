@@ -26,20 +26,20 @@
 
 /* || Card - Elevated */
 
-:host.elevated {
+:host.card--variant-elevated {
     background-color: var(--md-sys-color-surface-container-low);
     box-shadow: var(--elevation-level-1);
 }
 
 /* || Card - Filled */
 
-:host.filled {
+:host.card--variant-filled {
     background-color: var(--md-sys-color-surface-container-highest);
 }
 
 /* || Card - Outlined */
 
-:host.outlined {
+:host.card--variant-outlined {
     border: 1px var(--md-sys-color-outline-variant) solid;
     background-color: var(--md-sys-color-surface);
 }

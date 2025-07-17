@@ -11,31 +11,31 @@
 
 /* || Button - Size */
 
-.button.xs {
+.button--size-xs {
     height: 32px;
     padding-left: 12px;
     padding-right: 12px;
 }
 
-.button.s {
+.button--size-s {
     height: 40px;
     padding-left: 16px;
     padding-right: 16px;
 }
 
-.button.m {
+.button--size-m {
     height: 56px;
     padding-left: 24px;
     padding-right: 24px;
 }
 
-.button.l {
+.button--size-l {
     height: 96px;
     padding-left: 48px;
     padding-right: 48px;
 }
 
-.button.xl {
+.button--size-xl {
     height: 136px;
     padding-left: 64px;
     padding-right: 64px;
@@ -43,124 +43,124 @@
 
 /* || Button - Shape */
 
-.button.round.xs {
+.button--shape-round.button--size-xs {
     border-radius: var(--md-sys-shape-corner-large);
 }
 
-.button.round.s {
+.button--shape-round.button--size-s {
     border-radius: var(--md-sys-shape-corner-large-increased);
 }
 
-.button.round.m {
+.button--shape-round.button--size-m {
     border-radius: var(--md-sys-shape-corner-extra-large);
 }
 
-.button.round.l {
+.button--shape-round.button--size-l {
     border-radius: var(--md-sys-shape-corner-extra-extra-large);
 }
 
-.button.round.xl {
+.button--shape-round.button--size-xl {
     border-radius: var(--md-sys-shape-corner-full);
 }
 
-.button.square.xs,
-.button.square.s {
+.button--shape-square.button--size-xs,
+.button--shape-square.button--size-s {
     border-radius: var(--md-sys-shape-corner-small);
 }
 
-.button.square.m {
+.button--shape-square.button--size-m {
     border-radius: var(--md-sys-shape-corner-large);
 }
 
-.button.square.l,
-.button.square.xl {
+.button--shape-square.button--size-l,
+.button--shape-square.button--size-xl {
     border-radius: var(--md-sys-shape-corner-extra-large);
 }
 
 /* || Button - Color */
 
-.button.default.elevated {
+.button--color-elevated {
     background-color: var(--md-sys-color-surface-container-low);
     color: var(--md-sys-color-primary);
     box-shadow: var(--elevation-level-1);
 }
 
-.button.default.filled {
+.button--color-filled {
     background-color: var(--md-sys-color-primary);
     color: var(--md-sys-color-on-primary);
 }
 
-.button.default.tonal {
+.button--color-tonal {
     background-color: var(--md-sys-color-secondary-container);
     color: var(--md-sys-color-on-secondary-container);
 }
 
-.button.default.outlined {
+.button--color-outlined {
     background: none;
     border: 1px var(--md-sys-color-outline) solid;
     color: var(--md-sys-color-on-surface-variant);
 }
 
-.button.text {
+.button--color-text {
     background: none;
     color: var(--md-sys-color-primary);
 }
 
 /* || Button - Typography */
 
-.button.xs .label-text,
-.button.s .label-text {
+.button--size-xs .button__label-text,
+.button--size-s .button__label-text {
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.1px;
 }
 
-.button.xs .icon,
-.button.s .icon {
+.button--size-xs .button__icon,
+.button--size-s .button__icon {
     font-size: 20px;
 }
 
-.button.xs .icon {
+.button--size-xs .button__icon {
     margin-right: 4px;
 }
 
-.button.s .icon,
-.button.m .icon {
+.button--size-s .button__icon,
+.button--size-m .button__icon {
     margin-right: 8px;
 }
 
-.button.m .label-text {
+.button--size-.m .button__label-text {
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.15px;
 }
 
-.button.m .icon {
+.button--size-m .button__icon {
     font-size: 24px;
 }
 
-.button.l .label-text {
+.button--size-l .button__label-text {
     font-weight: 400;
     font-size: 24px;
     line-height: 32px;
     letter-spacing: 0px;
 }
 
-.button.l .icon {
+.button--size-l .button__icon {
     font-size: 32px;
     margin-right: 12px;
 }
 
-.button.xl .label-text {
+.button--size-xl .button__label-text {
     font-weight: 400;
     font-size: 32px;
     line-height: 40px;
     letter-spacing: 0px;
 }
 
-.button.xl .icon {
+.button--size-xl .button__icon {
     font-size: 40px;
     margin-right: 16px;
 }
@@ -176,42 +176,42 @@
         transition: none;
     }
 
-    .button.default.elevated:active {
+    .button--color-elevated:active {
         background-color: var(--md-sys-color-primary);
         color: var(--md-sys-color-inverse-on-surface);
     }
 
-    .button.default.filled:active {
+    .button--color-filled:active {
         background-color: var(--md-sys-color-on-primary);
         color: var(--md-sys-color-on-surface);
     }
 
-    .button.default.tonal:active {
+    .button--color-tonal:active {
         background-color: var(--md-sys-color-on-secondary-container);
         color: var(--md-sys-color-inverse-on-surface);
     }
 
-    .button.default.outlined:active {
+    .button--color-outlined:active {
         background-color: var(--md-sys-color-on-surface-variant);
         color: var(--md-sys-color-inverse-on-surface);
     }
 
-    .button.default.text:active {
+    .button--color-text:active {
         background-color: var(--md-sys-color-primary);
         color: var(--md-sys-color-inverse-on-surface);
     }
 
-    .button.xs:active,
-    .button.s:active {
+    .button--size-xs:active,
+    .button--size-s:active {
         border-radius: var(--md-sys-shape-corner-small) !important;
     }
 
-    .button.m:active {
+    .button--size-m:active {
         border-radius: var(--md-sys-shape-corner-medium) !important;
     }
 
-    .button.l:active,
-    .button.xl:active {
+    .button--size-l:active,
+    .button--size-xl:active {
         border-radius: var(--md-sys-shape-corner-large) !important;
     }
 }
@@ -221,27 +221,27 @@
         transition: background-color 250ms ease-in-out, color 250ms ease-in-out, border-radius 250ms ease-in-out;
     }
 
-    .button.default.elevated:hover {
+    .button--color-elevated:hover {
         background-color: var(--md-sys-color-primary);
         color: var(--md-sys-color-inverse-on-surface);
     }
 
-    .button.default.filled:hover {
+    .button--color-filled:hover {
         background-color: var(--md-sys-color-on-primary);
         color: var(--md-sys-color-on-surface);
     }
 
-    .button.default.tonal:hover {
+    .button--color-tonal:hover {
         background-color: var(--md-sys-color-on-secondary-container);
         color: var(--md-sys-color-inverse-on-surface);
     }
 
-    .button.default.outlined:hover {
+    .button--color-outlined:hover {
         background-color: var(--md-sys-color-on-surface-variant);
         color: var(--md-sys-color-inverse-on-surface);
     }
 
-    .button.default.text:hover {
+    .button--color-text:hover {
         background-color: var(--md-sys-color-primary);
         color: var(--md-sys-color-inverse-on-surface);
     }
@@ -252,17 +252,17 @@
         transition: none;
     }
 
-    .button.xs:active,
-    .button.s:active {
+    .button--size-xs:active,
+    .button--size-s:active {
         border-radius: var(--md-sys-shape-corner-small) !important;
     }
 
-    .button.m:active {
+    .button--size-m:active {
         border-radius: var(--md-sys-shape-corner-medium) !important;
     }
 
-    .button.l:active,
-    .button.xl:active {
+    .button--size-l:active,
+    .button--size-xl:active {
         border-radius: var(--md-sys-shape-corner-large) !important;
     }
 }

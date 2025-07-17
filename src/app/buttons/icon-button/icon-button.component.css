@@ -11,139 +11,139 @@
 
 /* || Icon button - Size - Icon */
 
-.icon-button.xs .icon {
+.icon-button--size-xs .icon-button__icon {
     font-size: 20px;
 }
 
-.icon-button.s .icon,
-.icon-button.m .icon {
+.icon-button--size-s .icon-button__icon,
+.icon-button--size-m .icon-button__icon {
     font-size: 24px;
 }
 
-.icon-button.l .icon {
+.icon-button--size-l .icon-button__icon {
     font-size: 32px;
 }
 
-.icon-button.xl .icon {
+.icon-button--size-xl .icon-button__icon {
     font-size: 40px;
 }
 
 /* || Button - Size - Width */
 
-.icon-button.xs.default-width {
+.icon-button--size-xs.icon-button--width-default {
     height: 32px;
     width: 32px;
 }
 
-.icon-button.xs.narrow-width {
+.icon-button--size-xs.icon-button--width-narrow {
     height: 32px;
     width: 28px;
 }
 
-.icon-button.xs.wide-width {
+.icon-button--size-xs.icon-button--width-wide {
     height: 32px;
     width: 40px;
 }
 
-.icon-button.s.default-width {
+.icon-button--size-s.icon-button--width-default {
     height: 40px;
     width: 40px;
 }
 
-.icon-button.s.narrow-width {
+.icon-button--size-s.icon-button--width-narrow {
     height: 40px;
     width: 32px;
 }
 
-.icon-button.s.wide-width {
+.icon-button--size-s.icon-button--width-wide {
     height: 40px;
     width: 52px;
 }
 
-.icon-button.m.default-width {
+.icon-button--size-m.icon-button--width-default {
     height: 56px;
     width: 56px;
 }
 
-.icon-button.m.narrow-width {
+.icon-button--size-m.icon-button--width-narrow {
     height: 56px;
     width: 48px;
 }
 
-.icon-button.m.wide-width {
+.icon-button--size-m.icon-button--width-wide {
     height: 56px;
     width: 72px;
 }
 
-.icon-button.l.default-width {
+.icon-button--size-l.icon-button--width-default {
     height: 96px;
     width: 96px;
 }
 
-.icon-button.l.narrow-width {
+.icon-button--size-l.icon-button--width-narrow {
     height: 96px;
     width: 64px;
 }
 
-.icon-button.l.wide-width {
+.icon-button--size-l.icon-button--width-wide {
     height: 96px;
     width: 128px;
 }
 
-.icon-button.xl.default-width {
+.icon-button--size-xl.icon-button--width-default {
     height: 136px;
     width: 136px;
 }
 
-.icon-button.xl.narrow-width {
+.icon-button--size-xl.icon-button--width-narrow {
     height: 136px;
     width: 104px;
 }
 
-.icon-button.xl.wide-width {
+.icon-button--size-xl.icon-button--width-wide {
     height: 136px;
     width: 184px;
 }
 
 /* || Icon button - Shape */
 
-.icon-button.round {
+.icon-button--shape-round {
     border-radius: var(--md-sys-shape-corner-full);
 }
 
-.icon-button.square.xs,
-.icon-button.square.s {
+.icon-button--shape-square.icon-button--size-xs,
+.icon-button--shape-square.icon-button--size-s {
     border-radius: var(--md-sys-shape-corner-medium);
 }
 
-.icon-button.square.m {
+.icon-button--shape-square.icon-button--size-m {
     border-radius: var(--md-sys-shape-corner-large);
 }
 
-.icon-button.square.l,
-.icon-button.square.xl {
+.icon-button--shape-square.icon-button--size-l,
+.icon-button--shape-square.icon-button--size-xl {
     border-radius: var(--md-sys-shape-corner-extra-large);
 }
 
 /* || Icon button - Color */
 
-.icon-button.default.filled {
+.icon-button--color-filled {
     background-color: var(--md-sys-color-primary);
     color: var(--md-sys-color-on-primary);
 }
 
-.icon-button.default.tonal {
+.icon-button--color-tonal {
     background-color: var(--md-sys-color-secondary-container);
     color: var(--md-sys-color-on-secondary-container);
 }
 
-.icon-button.default.outlined {
+.icon-button--color-outlined {
     background: none;
     border: 1px var(--md-sys-color-outline) solid;
     color: var(--md-sys-color-on-surface-variant);
 }
 
-.icon-button.default.standard {
+.icon-button--color-standard {
     background: none;
     color: var(--md-sys-color-on-surface-variant);
 }
@@ -159,22 +159,22 @@
         transition: none;
     }
 
-    .icon-button.default.filled:active {
+    .icon-button--color-filled:active {
         background-color: var(--md-sys-color-on-primary);
         color: var(--md-sys-color-on-surface);
     }
 
-    .icon-button.default.tonal:active {
+    .icon-button--color-tonal:active {
         background-color: var(--md-sys-color-on-secondary-container);
         color: var(--md-sys-color-inverse-on-surface);
     }
 
-    .icon-button.default.outlined:active {
+    .icon-button--color-outlined:active {
         background-color: var(--md-sys-color-on-surface-variant);
         color: var(--md-sys-color-inverse-on-surface);
     }
 
-    .icon-button.default.standard:active {
+    .icon-button--color-standard:active {
         background-color: var(--md-sys-color-on-surface-variant);
         color: var(--md-sys-color-inverse-on-surface);
     }
@@ -185,22 +185,22 @@
         transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
     }
 
-    .icon-button.default.filled:hover {
+    .icon-button--color-filled:hover {
         background-color: var(--md-sys-color-on-primary);
         color: var(--md-sys-color-on-surface);
     }
 
-    .icon-button.default.tonal:hover {
+    .icon-button--color-tonal:hover {
         background-color: var(--md-sys-color-on-secondary-container);
         color: var(--md-sys-color-inverse-on-surface);
     }
 
-    .icon-button.default.outlined:hover {
+    .icon-button--color-outlined:hover {
         background-color: var(--md-sys-color-on-surface-variant);
         color: var(--md-sys-color-inverse-on-surface);
     }
 
-    .icon-button.default.standard:hover {
+    .icon-button--color-standard:hover {
         background-color: var(--md-sys-color-on-surface-variant);
         color: var(--md-sys-color-inverse-on-surface);
     }

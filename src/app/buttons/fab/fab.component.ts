@@ -12,12 +12,12 @@ export class FabComponent {
   @Input() color: 'tonal-primary' | 'tonal-secondary' | 'tonal-tertiary' | 'primary' | 'secondary' | 'tertiary' = 'tonal-primary';
   @Input() icon: string = 'grid_guides';
 
-  get classes(): string[] {
-    return [
-      "fab",
-      this.size,
-      this.color,
-      this.icon
-    ];
+  get classes(): string {
+    const classes: string[] = ["fab"];
+
+    classes.push(`fab--size-${this.size}`);
+    classes.push(`fab--color-${this.color}`);
+
+    return classes.join(' ');
   }
 }

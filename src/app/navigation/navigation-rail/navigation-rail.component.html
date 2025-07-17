@@ -1,37 +1,39 @@
-<div class="menu-button-container">
-    <cxw-icon-button id="menu-button" size="m" color="standard" icon="menu_open" aria-label="Close Menu"
-        (click)="navService.toggleNavigationRail()">
+<div class="navigation-rail__menu-button-container">
+    <cxw-icon-button id="menu-button" class="navigation-rail__menu-button" size="m" color="standard" icon="menu_open"
+        aria-label="Close Menu" (click)="navService.toggleNavigationRail()">
     </cxw-icon-button>
 </div>
-<div class="nav-items">
-    <button class="nav-item" aria-label="Home" routerLink="/"
+
+<div class="navigation-rail__items">
+    <button class="navigation-rail__item" aria-label="Home" routerLink="/"
+        routerLinkActive="navigation-rail__item--active" [routerLinkActiveOptions]="{ exact: true }"
         (click)="navService.toggleNavigationRail();">
-        <span class="material-symbols-outlined icon">home</span>
-        <span class="label-text">Home</span>
+        <span class="material-symbols-outlined navigation-rail__item-icon">home</span>
+        <span class="navigation-rail__item-label-text">Home</span>
     </button>
-    <button class="nav-item" aria-label="Components" routerLink="/components"
-        (click)="navService.toggleNavigationRail();">
-        <span class="material-symbols-outlined icon">dashboard</span>
-        <span class="label-text">Components</span>
+    <button class="navigation-rail__item" aria-label="Components" routerLink="/components"
+        routerLinkActive="navigation-rail__item--active" (click)="navService.toggleNavigationRail();">
+        <span class="material-symbols-outlined navigation-rail__item-icon">dashboard</span>
+        <span class="navigation-rail__item-label-text">Components</span>
     </button>
-    <button class="nav-item" aria-label="Extras" routerLink="/extras"
-        (click)="navService.toggleNavigationRail();">
-        <span class="material-symbols-outlined icon">extension</span>
-        <span class="label-text">Extras</span>
+    <button class="navigation-rail__item" aria-label="Extras" routerLink="/extras"
+        routerLinkActive="navigation-rail__item--active" (click)="navService.toggleNavigationRail();">
+        <span class="material-symbols-outlined navigation-rail__item-icon">extension</span>
+        <span class="navigation-rail__item-label-text">Extras</span>
     </button>
-    <button class="nav-item" aria-label="Visuals" routerLink="/visuals"
-        (click)="navService.toggleNavigationRail();">
-        <span class="material-symbols-outlined icon">photo</span>
-        <span class="label-text">Visuals</span>
+    <button class="navigation-rail__item" aria-label="Visuals" routerLink="/visuals"
+        routerLinkActive="navigation-rail__item--active" (click)="navService.toggleNavigationRail();">
+        <span class="material-symbols-outlined navigation-rail__item-icon">photo</span>
+        <span class="navigation-rail__item-label-text">Visuals</span>
     </button>
-    <button class="nav-item" aria-label="Contact" routerLink="/contact"
-        (click)="navService.toggleNavigationRail();">
-        <span class="material-symbols-outlined icon">contact_page</span>
-        <span class="label-text">Contact</span>
+    <button class="navigation-rail__item" aria-label="Contact" routerLink="/contact"
+        routerLinkActive="navigation-rail__item--active" (click)="navService.toggleNavigationRail();">
+        <span class="material-symbols-outlined navigation-rail__item-icon">contact_page</span>
+        <span class="navigation-rail__item-label-text">Contact</span>
     </button>
-    <button *ngFor="let item of [].constructor(2)" class="nav-item" aria-label="Other"
-        (click)="navService.toggleNavigationRail()">
-        <span class="material-symbols-outlined icon">stars</span>
-        <span class="label-text">Other</span>
+    <button *ngFor="let item of [].constructor(2)" class="navigation-rail__item" aria-label="Other"
+        routerLinkActive="navigation-rail__item--active" (click)="navService.toggleNavigationRail()">
+        <span class="material-symbols-outlined navigation-rail__item-icon">stars</span>
+        <span class="navigation-rail__item-label-text">Other</span>
     </button>
 </div>

@@ -10,19 +10,19 @@
   left: 0;
 }
 
-:host .menu-button-container {
+.navigation-rail__menu-button-container {
   display: flex;
   align-items: center;
   height: 64px;
 }
 
-:host #menu-button {
+.navigation-rail__menu-button {
   background: none;
   color: var(--md-sys-color-on-surface);
   margin-left: 4px;
 }
 
-:host .nav-items {
+.navigation-rail__items {
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -30,7 +30,7 @@
   overflow-y: scroll;
 }
 
-:host .nav-items .nav-item {
+.navigation-rail__item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,14 +41,14 @@
   color: var(--md-sys-color-on-surface-variant);
 }
 
-:host .nav-items .nav-item .icon {
+.navigation-rail__item-icon {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
 
-:host .nav-items .nav-item#active-indicator .icon {
+.navigation-rail__item--active .navigation-rail__item-icon {
   font-variation-settings:
     'FILL' 1;
 }
@@ -69,11 +69,11 @@
     transform: translateX(0);
   }
 
-  :host .nav-items {
+  .navigation-rail__items {
     margin-top: 44px;
   }
 
-  :host .nav-items .nav-item {
+  .navigation-rail__item {
     height: 56px;
     width: max-content;
     gap: 8px;
@@ -84,31 +84,31 @@
     border-radius: var(--md-sys-shape-corner-full);
   }
 
-  :host .nav-items .nav-item#active-indicator {
+  .navigation-rail__item--active {
     background-color: var(--md-sys-color-secondary-container);
   }
 
-  :host .nav-items .nav-item .label-text {
+  .navigation-rail__item-label-text {
     font-size: 14px;
     line-height: 20px;
     font-weight: 500;
     letter-spacing: 0.1px;
   }
 
-  :host .nav-items .nav-item#active-indicator .label-text {
+  .navigation-rail__item--active .navigation-rail__item-label-text {
     color: var(--md-sys-color-secondary);
   }
 
-  :host .nav-items .nav-item#active-indicator .icon {
+  .navigation-rail__item--active .navigation-rail__item-icon {
     color: var(--md-sys-color-on-secondary-container);
   }
 
   @media (hover:none) {
-    :host .nav-items .nav-item {
+    .navigation-rail__item {
       transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
     }
 
-    :host .nav-items .nav-item:not(#active-indicator):active {
+    .navigation-rail__item:not(.navigation-rail__item--active):active {
       background-color: var(--md-sys-color-on-secondary-container);
       color: var(--md-sys-color-inverse-on-surface);
       transition: none;
@@ -116,16 +116,16 @@
   }
 
   @media (hover:hover) {
-    :host .nav-items .nav-item {
+    .navigation-rail__item {
       transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
     }
 
-    :host .nav-items .nav-item:not(#active-indicator):hover {
+    .navigation-rail__item:not(.navigation-rail__item--active):hover {
       background-color: var(--md-sys-color-on-secondary-container);
       color: var(--md-sys-color-inverse-on-surface);
     }
 
-    :host .nav-items .nav-item:not(#active-indicator):active {
+    .navigation-rail__item:not(.navigation-rail__item--active):active {
       background-color: var(--md-sys-color-surface);
       color: var(--md-sys-color-on-surface);
       transition: none;
@@ -157,19 +157,19 @@
     background-color: var(--md-sys-color-surface-container);
   }
 
-  :host .menu-button-container {
+  .navigation-rail__menu-button-container {
     display: none;
   }
 
-  :host .nav-items {
+  .navigation-rail__items {
     margin-top: calc(64px + 56px + 40px + 16px);
   }
 
-  :host .nav-items .nav-item {
+  .navigation-rail__item {
     flex-direction: column;
   }
 
-  :host .nav-items .nav-item .label-text {
+  .navigation-rail__item-label-text {
     margin-top: 4px;
     margin-bottom: 6px;
     font-size: 12px;
@@ -178,7 +178,7 @@
     letter-spacing: 0.5px;
   }
 
-  :host .nav-items .nav-item .icon {
+  .navigation-rail__item-icon {
     height: 36px;
     width: 56px;
     padding-left: 16px;
@@ -186,61 +186,61 @@
     border-radius: var(--md-sys-shape-corner-full);
   }
 
-  :host .nav-items .nav-item#active-indicator .icon {
+  .navigation-rail__item--active .navigation-rail__item-icon {
     background-color: var(--md-sys-color-secondary-container);
     color: var(--md-sys-color-on-secondary-container);
   }
 
-  :host .nav-items .nav-item#active-indicator .label-text {
+  .navigation-rail__item--active .navigation-rail__item-label-text {
     color: var(--md-sys-color-secondary);
   }
 
   @media (hover:none) {
-    :host .nav-item .icon {
+    .navigation-rail__item-icon {
       transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
     }
 
-    :host .nav-item .label-text {
+    .navigation-rail__item-label-text {
       transition: color 250ms ease-in-out;
     }
 
-    :host .nav-item:not(#active-indicator):active .icon {
+    .navigation-rail__item:not(.navigation-rail__item--active):active .navigation-rail__item-icon {
       background-color: var(--md-sys-color-on-secondary-container);
       color: var(--md-sys-color-inverse-on-surface);
       transition: none;
     }
 
-    :host .nav-item:not(#active-indicator):active .label-text {
+    .navigation-rail__item:not(.navigation-rail__item--active):active .navigation-rail__item-label-text {
       color: var(--md-sys-color-on-surface);
       transition: none;
     }
   }
 
   @media (hover:hover) {
-    :host .nav-item .icon {
+    .navigation-rail__item-icon {
       transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
     }
 
-    :host .nav-item .label-text {
+    .navigation-rail__item-label-text {
       transition: color 250ms ease-in-out;
     }
 
-    :host .nav-item:not(#active-indicator):hover .icon {
+    .navigation-rail__item:not(.navigation-rail__item--active):hover .navigation-rail__item-icon {
       background-color: var(--md-sys-color-on-secondary-container);
       color: var(--md-sys-color-inverse-on-surface);
     }
 
-    :host .nav-item:not(#active-indicator):hover .label-text {
+    .navigation-rail__item:not(.navigation-rail__item--active):hover .navigation-rail__item-label-text {
       color: var(--md-sys-color-on-surface);
     }
 
-    :host .nav-item:not(#active-indicator):active .icon {
+    .navigation-rail__item:not(.navigation-rail__item--active):active .navigation-rail__item-icon {
       background-color: var(--md-sys-color-surface);
       color: var(--md-sys-color-on-surface);
       transition: none;
     }
 
-    :host .nav-item:not(#active-indicator):active .label-text {
+    .navigation-rail__item:not(.navigation-rail__item--active):active .navigation-rail__item-label-text {
       color: var(--md-sys-color-on-surface);
       transition: none;
     }

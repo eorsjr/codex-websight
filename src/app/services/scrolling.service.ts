@@ -80,7 +80,7 @@ export class ScrollingService {
    * @returns {void}
    */
   public handleScrollVisibility(): void {
-    const navComponent = document.querySelector('cxw-flexible-navigation-bar') as HTMLElement;
+    const navComponent = document.querySelector('cxw-navigation-bar') as HTMLElement;
     const appBar = document.querySelector('.app-bar') as HTMLElement;
     const fab = document.querySelector('.fab') as HTMLElement;
 

@@ -29,7 +29,7 @@
   transform: translateY(100%);
 }
 
-:host .nav-item {
+.navigation-bar__item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,25 +38,25 @@
   color: var(--md-sys-color-on-surface-variant);
 }
 
-:host .nav-item .label-text {
+.navigation-bar__item-label-text {
   font-size: 12px;
   line-height: 16px;
   font-weight: 500;
   letter-spacing: 0.5px;
 }
 
-:host .nav-item#active-indicator .label-text {
-  color: var(--md-sys-color-secondary);
-}
-
-:host .nav-item .icon {
+.navigation-bar__item-icon {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
 
-:host .nav-item#active-indicator .icon {
+.navigation-bar__item--active .navigation-bar__item-label-text {
+  color: var(--md-sys-color-secondary);
+}
+
+.navigation-bar__item--active .navigation-bar__item-icon {
   font-variation-settings:
     'FILL' 1;
   color: var(--md-sys-color-on-secondary-container);
@@ -80,70 +80,70 @@
     }
   }
 
-  :host .nav-item {
+  .navigation-bar__item {
     flex-direction: column;
   }
 
-  :host .nav-item .label-text {
+  .navigation-bar__item-label-text {
     margin-top: 4px;
   }
 
-  :host .nav-item .icon {
+  .navigation-bar__item-icon {
     height: 32px;
     width: 56px;
     border-radius: var(--md-sys-shape-corner-full);
   }
 
-  :host .nav-item#active-indicator .icon {
+  .navigation-bar__item--active .navigation-bar__item-icon {
     background-color: var(--md-sys-color-secondary-container);
   }
 
   @media (hover:none) {
-    :host .nav-item .icon {
+    .navigation-bar__item-icon {
       transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
     }
 
-    :host .nav-item .label-text {
+    .navigation-bar__item-label-text {
       transition: color 250ms ease-in-out;
     }
 
-    :host .nav-item:not(#active-indicator):active .icon {
+    .navigation-bar__item:not(.navigation-bar__item--active):active .navigation-bar__item-icon {
       background-color: var(--md-sys-color-on-secondary-container);
       color: var(--md-sys-color-inverse-on-surface);
       transition: none;
     }
 
-    :host .nav-item:not(#active-indicator):active .label-text {
+    .navigation-bar__item:not(.navigation-bar__item--active):active .navigation-bar__item-label-text {
       color: var(--md-sys-color-on-surface);
       transition: none;
     }
   }
 
   @media (hover:hover) {
-    :host .nav-item .icon {
+    .navigation-bar__item-icon {
       transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
     }
 
-    :host .nav-item .label-text {
+    .navigation-bar__item-label-text {
       transition: color 250ms ease-in-out;
     }
 
-    :host .nav-item:not(#active-indicator):hover .icon {
+    .navigation-bar__item:not(.navigation-bar__item--active):hover .navigation-bar__item-icon {
       background-color: var(--md-sys-color-on-secondary-container);
       color: var(--md-sys-color-inverse-on-surface);
     }
 
-    :host .nav-item:not(#active-indicator):hover .label-text {
+    .navigation-bar__item:not(.navigation-bar__item--active):hover .navigation-bar__item-label-text {
       color: var(--md-sys-color-on-surface);
     }
 
-    :host .nav-item:not(#active-indicator):active .icon {
+    .navigation-bar__item:not(.navigation-bar__item--active):active .navigation-bar__item-icon {
       background-color: var(--md-sys-color-surface);
       color: var(--md-sys-color-on-surface);
       transition: none;
     }
 
-    :host .nav-item:not(#active-indicator):active .label-text {
+    .navigation-bar__item:not(.navigation-bar__item--active):active .navigation-bar__item-label-text {
       color: var(--md-sys-color-on-surface);
       transition: none;
     }
@@ -160,7 +160,7 @@
   }
 
 
-  :host .nav-item {
+  .navigation-bar__item {
     height: 40px;
     padding-left: 16px;
     padding-right: 16px;
@@ -169,21 +169,21 @@
 
   }
 
-  :host .nav-item#active-indicator {
+  .navigation-bar__item--active {
     background-color: var(--md-sys-color-secondary-container);
     color: var(--md-sys-color-secondary);
   }
 
-  :host .nav-item .icon {
+  .navigation-bar__item-icon {
     height: 32px;
   }
 
   @media (hover:none) {
-    :host .nav-item {
+    .navigation-bar__item {
       transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
     }
 
-    :host .nav-item:not(#active-indicator):active {
+    .navigation-bar__item:not(.navigation-bar__item--active):active {
       background-color: var(--md-sys-color-on-secondary-container);
       color: var(--md-sys-color-inverse-on-surface);
       transition: none;
@@ -191,16 +191,16 @@
   }
 
   @media (hover:hover) {
-    :host .nav-item {
+    .navigation-bar__item {
       transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
     }
 
-    :host .nav-item:not(#active-indicator):hover {
+    .navigation-bar__item:not(.navigation-bar__item--active):hover {
       background-color: var(--md-sys-color-on-secondary-container);
       color: var(--md-sys-color-inverse-on-surface);
     }
 
-    :host .nav-item:not(#active-indicator):active {
+    .navigation-bar__item:not(.navigation-bar__item--active):active {
       background-color: var(--md-sys-color-surface);
       color: var(--md-sys-color-on-surface);
       transition: none;

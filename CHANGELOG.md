@@ -1,3 +1,23 @@
+# [2.0.0-beta.2](https://github.com/eorsjr/codex-websight/compare/v2.0.0-beta.1...v2.0.0-beta.2) (2025-07-17)
+
+
+### Code Refactoring
+
+* **components:** :art: adopt BEM naming convention ([f1dcf3c](https://github.com/eorsjr/codex-websight/commit/f1dcf3c3d6c5dcc788e927b83a8834f268d2b6a5))
+* **navigation:** :art: overhaul component structure and adopt BEM ([94703e5](https://github.com/eorsjr/codex-websight/commit/94703e5d9e394a120d671d782fea40b0c0009f93))
+
+
+### BREAKING CHANGES
+
+* **navigation:** This commit introduces several breaking changes.
+- All CSS class names within navigation components have been updated.
+- The `NavigationComponent` and its selector have been removed.
+- The `FlexibleNavigationBarComponent` has been renamed to
+  `NavigationBarComponent`. All imports and template usages must be updated.
+* **components:** CSS class names across multiple components have been renamed to follow BEM. All HTML templates using these components must be updated to use the new class names.
+
+
+
 # [2.0.0-beta.1](https://github.com/eorsjr/codex-websight/compare/v2.0.0-alpha.2...v2.0.0-beta.1) (2025-07-15)
 
 

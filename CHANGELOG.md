@@ -1,3 +1,19 @@
+# [2.0.0-rc.1](https://github.com/eorsjr/codex-websight/compare/v2.0.0-beta.2...v2.0.0-rc.1) (2025-07-19)
+
+
+### Code Refactoring
+
+* **components:** :art: use descriptive BEM modifiers for visibility ([da8d25b](https://github.com/eorsjr/codex-websight/commit/da8d25b51b266b4df370b55044cce808744c263a))
+* **scrim:** :building_construction: centralize scrim logic into a generic service ([65ba92d](https://github.com/eorsjr/codex-websight/commit/65ba92d5cd0f7f19549704f0a894b6b0afe080b2))
+
+
+### BREAKING CHANGES
+
+* **scrim:** The `ScrimService` API has changed. Consumers must use the new `show()` and `hide()` methods instead of directly manipulating service properties.
+* **components:** The generic `.remove` and `.show` classes for controlling component visibility have been removed. They are replaced with specific BEM modifiers like `--hidden` or `--visible`.
+
+
+
 # [2.0.0-beta.2](https://github.com/eorsjr/codex-websight/compare/v2.0.0-beta.1...v2.0.0-beta.2) (2025-07-17)
 
 

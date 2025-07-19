@@ -75,7 +75,7 @@
 
 
 
-# 1.0.0 (2025-07-06)
+# [1.0.0](https://github.com/eorsjr/codex-websight/compare/c02957d60b2e1b27e1a4171f7833fae34b3ed37a...v1.0.0) (2025-07-06)
 
 :tada: First public release of **EUI Web**
 

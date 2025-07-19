@@ -21,8 +21,7 @@ export class BasicDialogComponent {
    */
   public openDialog(): void {
     this.isOpen.set(true);
-    this.scrimService.setZIndex(3);
-    this.scrimService.isVisible.set(true);
+    this.scrimService.show(3);
   }
 
   /**
@@ -31,7 +30,7 @@ export class BasicDialogComponent {
    */
   public closeDialog(): void {
     this.isOpen.set(false);
-    this.scrimService.isVisible.set(false);
+    this.scrimService.hide();
   }
 
 }

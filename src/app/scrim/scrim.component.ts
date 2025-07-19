@@ -1,6 +1,5 @@
-import { Component, effect } from '@angular/core';
+import { Component, effect, HostBinding, HostListener } from '@angular/core';
 import { ScrollingService } from '../services/scrolling.service';
-import { NavigationService } from '../services/navigation.service';
 import { ScrimService } from '../services/scrim.service';
 
 @Component({
@@ -11,7 +10,7 @@ import { ScrimService } from '../services/scrim.service';
 })
 export class ScrimComponent {
 
-  constructor(private scrollingService: ScrollingService, public navService: NavigationService, public scrimService: ScrimService) {
+  constructor(private scrollingService: ScrollingService, public scrimService: ScrimService) {
     effect(() => {
       if (scrimService.isVisible()) {
         this.scrollingService.disableScroll();
@@ -22,12 +21,29 @@ export class ScrimComponent {
   }
 
   /**
-   * Toggles the navigation rail if it is currently open.
+   * Binds the `scrim--visible` class to the host element based on the scrim's visibility state.
+   * @returns {boolean} True if the scrim should be visible, false otherwise.
+   */
+  @HostBinding('class.scrim--visible')
+  get visible(): boolean {
+    return this.scrimService.isVisible();
+  }
+
+  /**
+   * Binds the `z-index` style property to the host element.
+   * @returns {number} The z-index value for the scrim.
+   */
+  @HostBinding('style.z-index')
+  get zIndex(): number {
+    return this.scrimService.zIndex();
+  }
+
+  /**
+   * Listens for click events on the host element and performs the configured action.
    * @returns {void}
    */
-  public toggleRail(): void {
-    if (this.navService.navigationRailOpen()) {
-      this.navService.toggleNavigationRail();
-    }
+  @HostListener('click')
+  public onClick(): void {
+    this.scrimService.performClickAction();
   }
 }

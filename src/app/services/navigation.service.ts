@@ -17,18 +17,15 @@ export class NavigationService {
    * @returns {void}
    */
   public toggleNavigationRail(): void {
-    const rail = document.querySelector('cxw-navigation-rail');
-
-    if (rail) {
-      if (window.innerWidth < 840) {
-        this.navigationRailOpen.set(!this.navigationRailOpen());
-        rail.classList.toggle('show');
-        this.elevationService.updateElevation();
-        this.scrimService.setZIndex(2);
-        this.scrimService.isVisible.set(this.navigationRailOpen());
-      }
+    const rail = document.querySelector('cxw-navigation-rail') as HTMLElement;
+    if (rail && window.innerWidth < 840) {
+      const isOpen = !this.navigationRailOpen();
+      this.navigationRailOpen.set(isOpen);
+      rail.classList.toggle('navigation-rail--visible', isOpen);
+      this.elevationService.updateElevation();
+      if (isOpen) this.scrimService.show(2, () => this.toggleNavigationRail());
+      else this.scrimService.hide();
     }
-
   }
 
   /**
@@ -48,17 +45,13 @@ export class NavigationService {
    * @returns {void}
    */
   public closeNavigationRail(): void {
-    const rail = document.querySelector('cxw-navigation-rail');
-
-    if (rail) {
-      if (this.navigationRailOpen()) {
-        this.scrimService.isVisible.set(false);
-      }
+    const rail = document.querySelector('cxw-navigation-rail') as HTMLElement;
+    if (rail && this.navigationRailOpen()) {
       this.navigationRailOpen.set(false);
-      rail.classList.remove('show');
+      rail.classList.remove('navigation-rail--visible');
       this.elevationService.updateElevation();
+      this.scrimService.hide();
     }
   }
 
 }
-

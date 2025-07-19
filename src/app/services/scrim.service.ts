@@ -9,12 +9,34 @@ export class ScrimService {
 
   public isVisible = signal(false); // Signal to track whether the scrim is visible
   public zIndex = signal(1); // Signal to store the current z-index of the scrim
+  private clickAction: () => void = () => { }; // Function to execute when the scrim is clicked
 
   /**
-   * Sets the z-index of the scrim.
-   * @param value The z-index value to set.
+   * Shows the scrim with the specified z-index and optional click action.
+   * @param zIndex The z-index to set for the scrim.
+   * @param action An optional function to execute when the scrim is clicked.
+   * @returns {void}
    */
-  public setZIndex(value: number) {
-    this.zIndex.set(value);
+  public show(zIndex: number, action: () => void = () => { }): void {
+    this.zIndex.set(zIndex);
+    this.clickAction = action;
+    this.isVisible.set(true);
+  }
+
+  /**
+   * Hides the scrim.
+   * @returns {void}
+   */
+  public hide(): void {
+    this.isVisible.set(false);
+    this.clickAction = () => { };
+  }
+  
+  /**
+   * Performs the click action associated with the scrim.
+   * @returns {void}
+   */
+  public performClickAction(): void {
+    this.clickAction();
   }
 }

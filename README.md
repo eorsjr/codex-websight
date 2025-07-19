@@ -10,6 +10,7 @@ Additionally, features unrelated to MWC are also being developed to improve the 
 
 #### Components
 - **App Bar**
+- **Basic Dialog**
 - **Button Components**
     - **Buttons**
         - Five color options:
@@ -21,6 +22,9 @@ Additionally, features unrelated to MWC are also being developed to improve the 
     - **Icon Buttons**
         - Many configurations:
             Color, size, width, and shape
+    - **FAB (Floating Action Button)**
+        - Three sizes:
+            FAB, medium FAB, large FAB
 - **Cards**
     - Elevated Card
     - Filled Card

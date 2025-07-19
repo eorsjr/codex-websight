@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 import { LightboxService } from '../services/lightbox.service';
 import { CommonModule } from '@angular/common';
 import { IconButtonComponent } from '../buttons/icon-button/icon-button.component';
@@ -9,15 +9,21 @@ import { IconButtonComponent } from '../buttons/icon-button/icon-button.componen
   imports: [CommonModule, IconButtonComponent],
   templateUrl: './lightbox.component.html',
   styleUrl: './lightbox.component.css',
-  host: {
-    '[class.visible]': 'lightboxService.lightboxOpen()'
-  }
 })
 export class LightboxComponent {
 
   constructor(public lightboxService: LightboxService) { }
 
   public loaded = false;
+
+  /**
+   * Binds the `lightbox--visible` class to the host element based on the lightbox's visibility state.
+   * @returns {boolean} True if the lightbox should be visible, false otherwise.
+   */
+  @HostBinding('class.lightbox--visible')
+  get visible(): boolean {
+    return this.lightboxService.lightboxOpen();
+  }
 
   /**
    * Called when the lightbox image loads.

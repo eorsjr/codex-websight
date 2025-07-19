@@ -17,7 +17,7 @@
     transition: box-shadow 250ms ease-in-out, transform 0.5s ease;
 }
 
-.app-bar.remove {
+.app-bar--hidden {
     transform: translateY(-100%);
 }
 

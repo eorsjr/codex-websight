@@ -88,22 +88,22 @@ export class ScrollingService {
 
     if (!this.railOpen) {
       if (window.innerWidth >= 840 || this.prevScrollPos > currentScrollPos || currentScrollPos < 1) {
-        navComponent?.classList.remove('remove');
+        navComponent?.classList.remove('navigation-bar--hidden');
       } else {
-        navComponent?.classList.add('remove');
+        navComponent?.classList.add('navigation-bar--hidden');
       }
 
       if (window.innerWidth < 840) {
         if (currentScrollPos > this.prevScrollPos && currentScrollPos > 1) {
-          appBar?.classList.add('remove');
-          fab?.classList.add('remove');
+          appBar?.classList.add('app-bar--hidden');
+          fab?.classList.add('fab--hidden');
         } else if (currentScrollPos < this.prevScrollPos) {
-          appBar?.classList.remove('remove');
-          fab?.classList.remove('remove');
+          appBar?.classList.remove('app-bar--hidden');
+          fab?.classList.remove('fab--hidden');
         }
       } else {
-        appBar?.classList.remove('remove');
-        fab?.classList.remove('remove');
+        appBar?.classList.remove('app-bar--hidden');
+        fab?.classList.remove('fab--hidden');
       }
     }
 

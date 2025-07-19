@@ -25,7 +25,7 @@
   /* WebKit browsers */
 }
 
-:host.remove {
+:host(.navigation-bar--hidden) {
   transform: translateY(100%);
 }
 

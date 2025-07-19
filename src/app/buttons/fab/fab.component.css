@@ -10,7 +10,7 @@
     transform: translateY(0);
 }
 
-.fab.remove {
+.fab--hidden {
     transform: translateY(400%);
 }
 

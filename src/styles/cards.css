@@ -14,11 +14,13 @@ cxw-card .card__hero-content img {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    border-radius: 0;
 }
 
 cxw-card img {
     height: auto;
     width: 100%;
+    border-radius: var(--md-sys-shape-corner-medium);
 }
 
 /* || Side-by-side */

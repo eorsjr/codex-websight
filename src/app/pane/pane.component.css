@@ -3,7 +3,7 @@
 .pane {
     overflow: auto;
     margin-top: 64px;
-    border-radius: 28px;
+    border-radius: var(--md-sys-shape-corner-extra-large);
     background-color: var(--md-sys-color-background);
 }
 

@@ -13,11 +13,12 @@
   width: 100%;
   bottom: 0;
   justify-content: space-evenly;
-  height: 64px;
+  min-height: 64px;
   box-shadow: var(--elevation-level-2);
   background-color: var(--md-sys-color-surface-container);
   transform: translateY(0);
   transition: transform 0.5s ease;
+  padding-bottom: env(safe-area-inset-bottom)
 }
 
 :host::-webkit-scrollbar {
@@ -68,19 +69,10 @@
 
   :host {
     padding-top: 6px;
-    padding-bottom: 6px;
-  }
-
-  /* For standalone mode */
-  @media (display-mode:standalone) {
-    :host {
-      height: auto;
-      min-height: 64px;
-      padding-bottom: env(safe-area-inset-bottom);
-    }
   }
 
   .navigation-bar__item {
+    height: 52px;
     flex-direction: column;
   }
 
@@ -156,7 +148,6 @@
 
   :host {
     padding-top: 12px;
-    padding-bottom: 12px;
   }
 
 

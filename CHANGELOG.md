@@ -1,3 +1,17 @@
+# [2.0.0-rc.2](https://github.com/eorsjr/codex-websight/compare/v2.0.0-rc.1...v2.0.0-rc.2) (2025-07-26)
+
+
+### Bug Fixes
+
+* **FAB:** :lipstick: adjust icon size for large FAB ([fdee818](https://github.com/eorsjr/codex-websight/commit/fdee8182eda8840756336cb61ef284ced0a6eeca))
+
+
+### Features
+
+* **card:** :lipstick: add border-radius to card images ([41a652a](https://github.com/eorsjr/codex-websight/commit/41a652a2212707c2081e441c57d3210883b1a06e))
+
+
+
 # [2.0.0-rc.1](https://github.com/eorsjr/codex-websight/compare/v2.0.0-beta.2...v2.0.0-rc.1) (2025-07-19)
 
 

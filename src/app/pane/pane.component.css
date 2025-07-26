@@ -9,20 +9,10 @@
 
 /* For compact and medium window classes */
 @media (max-width: 839px) {
-    body {
-        overflow: scroll;
-    }
-
     .pane {
         width: 100%;
-        padding-bottom: 80px;
-    }
-
-    /* For standalone mode */
-    @media (display-mode:standalone) {
-        .pane {
-            padding-bottom: calc(80px + 12px);
-        }
+        min-height: 100%;
+        padding-bottom: calc(64px + env(safe-area-inset-bottom));
     }
 }
 

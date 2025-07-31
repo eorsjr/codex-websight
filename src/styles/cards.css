@@ -63,6 +63,7 @@ cxw-card img {
     position: relative;
     display: inline-block;
     transition: box-shadow 250ms ease-in-out;
+    border-radius: var(--md-sys-shape-corner-medium);
 }
 
 @media (hover:none) {

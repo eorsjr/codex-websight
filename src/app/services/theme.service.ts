@@ -11,19 +11,19 @@ export class ThemeService {
   public isDarkMode = signal(document.body.classList.contains('dark')); // Signal to track whether the current color scheme is dark mode.
 
   /**
- * Applies the initial theme from local storage or falls back to the default.
- * @returns {void}
- */
+   * Applies the initial theme from local storage or falls back to the default.
+   * @returns {void}
+   */
   public setInitialTheme(): void {
     const selectedTheme = this.getStoredOrDefault("theme", 'silver');
     document.body.className = selectedTheme;
   }
 
   /**
- * Applies the initial font from local storage or falls back to the default.
- * Uses a delayed execution to ensure headers are rendered.
- * @returns {void}
- */
+   * Applies the initial font from local storage or falls back to the default.
+   * Uses a delayed execution to ensure headers are rendered.
+   * @returns {void}
+   */
   public setInitialFont(): void {
     const selectedFont = this.getStoredOrDefault("font", 'Noto Sans');
     setTimeout(() => {
@@ -32,9 +32,9 @@ export class ThemeService {
   }
 
   /**
- * Applies the initial color scheme (dark or light) based on local storage or system preference.
- * @returns {void}
- */
+   * Applies the initial color scheme (dark or light) based on local storage or system preference.
+   * @returns {void}
+   */
   public setInitialColorScheme(): void {
     const darkThemeLocalStorageValue = this.getLocalStorage("dark");
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -113,9 +113,9 @@ export class ThemeService {
   }
 
   /**
- * Applies the specified font to all relevant elements on the page.
- * @param {string} font - The font family to apply.
- */
+   * Applies the specified font to all relevant elements on the page.
+   * @param {string} font - The font family to apply.
+   */
   private applyFont(font: string): void {
     const headers = document.querySelectorAll("h1, h2, h3, h4, h5, h6, .basic-dialog__headline");
     headers.forEach(header => {
@@ -126,19 +126,19 @@ export class ThemeService {
   }
 
   /**
- * Sets a key-value pair in local storage.
- * @param {string} key - The key for the local storage item.
- * @param {string} value - The value to store in local storage.
- */
+   * Sets a key-value pair in local storage.
+   * @param {string} key - The key for the local storage item.
+   * @param {string} value - The value to store in local storage.
+   */
   private setLocalStorage(key: string, value: string) {
     localStorage.setItem(key, value);
   }
 
   /**
- * Retrieves a value from local storage by key.
- * @param {string} key - The key for the local storage item.
- * @returns {string} - The retrieved value, or an empty string if the key doesn't exist.
- */
+   * Retrieves a value from local storage by key.
+   * @param {string} key - The key for the local storage item.
+   * @returns {string} - The retrieved value, or an empty string if the key doesn't exist.
+   */
   private getLocalStorage(key: string): string {
     return localStorage.getItem(key) || "";
   }

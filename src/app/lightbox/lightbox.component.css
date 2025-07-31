@@ -11,6 +11,7 @@
     top: 0;
     left: env(safe-area-inset-left);
     right: env(safe-area-inset-right);
+    color: white;
 }
 
 :host(.lightbox--visible) {

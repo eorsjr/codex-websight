@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { signal } from '@angular/core';
-import { ElevationService } from './elevation.service';
 import { ScrimService } from './scrim.service';
 
 @Injectable({
@@ -8,7 +7,7 @@ import { ScrimService } from './scrim.service';
 })
 export class NavigationService {
 
-  constructor(private elevationService: ElevationService, private scrimService: ScrimService) { }
+  constructor(private scrimService: ScrimService) { }
 
   public navigationRailOpen = signal(false); // Signal to track whether the navigation rail is open
 
@@ -22,7 +21,6 @@ export class NavigationService {
       const isOpen = !this.navigationRailOpen();
       this.navigationRailOpen.set(isOpen);
       rail.classList.toggle('navigation-rail--visible', isOpen);
-      this.elevationService.updateElevation();
       if (isOpen) this.scrimService.show(2, () => this.toggleNavigationRail());
       else this.scrimService.hide();
     }
@@ -49,7 +47,6 @@ export class NavigationService {
     if (rail && this.navigationRailOpen()) {
       this.navigationRailOpen.set(false);
       rail.classList.remove('navigation-rail--visible');
-      this.elevationService.updateElevation();
       this.scrimService.hide();
     }
   }

@@ -13,6 +13,7 @@
     padding-left: calc(4px + env(safe-area-inset-left));
     padding-right: calc(4px + env(safe-area-inset-right));
     background-color: var(--md-sys-color-surface-container);
+    box-shadow: var(--elevation-level-2);
     transform: translateY(0);
     transition: box-shadow 250ms ease-in-out, transform 0.5s ease;
 }
@@ -64,6 +65,7 @@
 @media (min-width: 840px) {
     .app-bar {
         padding-left: calc(96px + env(safe-area-inset-left));
+        box-shadow: none;
     }
 
     .app-bar__menu-button {

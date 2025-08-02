@@ -5,7 +5,6 @@ import { ScrimComponent } from './scrim/scrim.component';
 import { LightboxComponent } from './lightbox/lightbox.component';
 import { FabComponent } from "./buttons/fab/fab.component";
 import { ThemeService } from './services/theme.service';
-import { ElevationService } from './services/elevation.service';
 import { NavigationService } from './services/navigation.service';
 import { ScrollingService } from './services/scrolling.service';
 import { Router, NavigationEnd } from '@angular/router';
@@ -22,7 +21,7 @@ import { NavigationRailComponent } from "./navigation/navigation-rail/navigation
 export class AppComponent {
   title = 'codex-websight';
 
-  constructor(private router: Router, private themeService: ThemeService, private elevationService: ElevationService, private navigationService: NavigationService, public scrollingService: ScrollingService) {
+  constructor(private router: Router, private themeService: ThemeService, private navigationService: NavigationService, public scrollingService: ScrollingService) {
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe(() => {
@@ -37,7 +36,7 @@ export class AppComponent {
     setTimeout(() => {
       this.themeService.updateThemeColor();
     });
-    this.elevationService.initialize();
+    this.scrollingService.initialize();
     this.navigationService.setupAutoCloseOnResize();
   }
 }

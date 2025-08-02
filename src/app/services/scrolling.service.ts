@@ -1,4 +1,4 @@
-import { Injectable, inject } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { NavigationService } from './navigation.service';
 import { effect } from '@angular/core';
 
@@ -6,104 +6,100 @@ import { effect } from '@angular/core';
   providedIn: 'root'
 })
 export class ScrollingService {
+
+  private pane: HTMLElement | null = null; // Pane element
   private railOpen = false; // Tracks if the navigation rail is open
-  private scrollPos = 0; // Current scroll position of the window
-  private prevScrollPos = window.scrollY; // Previous scroll position to determine scroll direction
+  private prevScrollPos = 0; // Previous scroll position to determine scroll direction
 
 
   constructor(private navService: NavigationService) {
     effect(() => {
       this.railOpen = this.navService.navigationRailOpen();
     });
-    window.addEventListener('scroll', () => this.handleScrollVisibility());
   }
 
   /**
-   * Disables scrolling on the body element and saves the current scroll position.
+   * Initializes the ScrollingService.
+   * @returns {void}
+   */
+  public initialize(): void {
+    this.pane = document.querySelector('cxw-pane') as HTMLElement;
+
+    if (this.pane) {
+      this.pane.addEventListener('scroll', this.handleScrollVisibility.bind(this));
+      window.addEventListener('resize', this.handleScrollVisibility.bind(this));
+      this.handleScrollVisibility();
+    }
+  }
+
+  /**
+   * Disables scrolling.
    * @returns {void}
    */
   public disableScroll(): void {
-    this.scrollPos = window.scrollY;
-    document.body.style.top = `-${this.scrollPos}px`;
-    document.body.style.overflow = 'hidden';
+    if (this.pane) {
+      this.pane.style.overflow = 'hidden';
+    }
   }
 
   /**
-   * Re-enables scrolling on the body element and restores the previous scroll position.
+   * Enables scrolling.
    * @returns {void}
    */
   public enableScroll(): void {
-    document.body.style.position = '';
-    document.body.style.top = '';
-    document.body.style.overflow = "scroll";
-    window.scrollTo({ top: this.scrollPos, behavior: 'instant' as ScrollBehavior });
-    this.scrollPos = 0;
+    if (this.pane) {
+      this.pane.style.overflow = 'auto';
+    }
   }
 
   /**
-   * Scrolls the window or pane to the top smoothly.
+   * Scrolls the pane to the top smoothly.
    * @returns {void}
    */
   public scrollToTop(): void {
-    if (window.innerWidth < 840) {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else {
-      const paneElement = document.querySelector('.pane') as HTMLElement;
-      paneElement?.scrollTo({ top: 0, behavior: 'smooth' });
+    if (this.pane) {
+      this.pane.scrollTo({ top: 0, behavior: 'smooth' as ScrollBehavior });
     }
   }
 
   /**
-   * Jumps to the top of the page or pane without smooth scrolling.
+   * Jumps to the top of the pane without smooth scrolling.
    * @returns {void}
    */
   public jumpToTop(): void {
-    if (window.innerWidth < 840) {
-      const html = document.documentElement;
-      const originalBehavior = html.style.scrollBehavior;
-      html.style.scrollBehavior = 'auto';
-      window.scrollTo({ top: 0 });
-      html.style.scrollBehavior = originalBehavior;
-    } else {
-      const paneElement = document.querySelector('.pane') as HTMLElement;
-      if (paneElement) {
-        const originalBehavior = paneElement.style.scrollBehavior;
-        paneElement.style.scrollBehavior = 'auto';
-        paneElement.scrollTo({ top: 0 });
-        paneElement.style.scrollBehavior = originalBehavior;
-      }
+    if (this.pane) {
+      this.pane.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior });
     }
   }
 
   /**
-   * Toggles visibility of navigation bar, app bar and fab based on scroll direction.
+   * Toggles visibility of elements based on scroll direction.
    * @returns {void}
    */
   public handleScrollVisibility(): void {
+    if (!this.pane) {
+      return;
+    }
+
     const navComponent = document.querySelector('cxw-navigation-bar') as HTMLElement;
     const appBar = document.querySelector('.app-bar') as HTMLElement;
     const fab = document.querySelector('.fab') as HTMLElement;
 
-    const currentScrollPos = window.scrollY;
+    const currentScrollPos = this.pane.scrollTop;
+
+    const isScrollingUp = currentScrollPos < this.prevScrollPos;
+    const isScrollingDown = currentScrollPos > this.prevScrollPos;
+    const isAtTop = currentScrollPos <= 5;
 
     if (!this.railOpen) {
-      if (window.innerWidth >= 840 || this.prevScrollPos > currentScrollPos || currentScrollPos < 1) {
+      if (window.innerWidth >= 840 || isScrollingUp || isAtTop) {
         navComponent?.classList.remove('navigation-bar--hidden');
-      } else {
-        navComponent?.classList.add('navigation-bar--hidden');
-      }
-
-      if (window.innerWidth < 840) {
-        if (currentScrollPos > this.prevScrollPos && currentScrollPos > 1) {
-          appBar?.classList.add('app-bar--hidden');
-          fab?.classList.add('fab--hidden');
-        } else if (currentScrollPos < this.prevScrollPos) {
-          appBar?.classList.remove('app-bar--hidden');
-          fab?.classList.remove('fab--hidden');
-        }
-      } else {
         appBar?.classList.remove('app-bar--hidden');
         fab?.classList.remove('fab--hidden');
+      } else if (isScrollingDown) {
+        navComponent?.classList.add('navigation-bar--hidden');
+        appBar?.classList.add('app-bar--hidden');
+        fab?.classList.add('fab--hidden');
       }
     }
 

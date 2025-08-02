@@ -28,6 +28,7 @@ html {
 body {
     width: 100%;
     line-height: 150%;
+    overflow: hidden;
     background-color: var(--md-sys-color-surface-container);
     color: var(--md-sys-color-on-background);
 }

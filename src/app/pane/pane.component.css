@@ -1,34 +1,33 @@
 /* || Pane */
 
-.pane {
+:host {
+    position: fixed;
     overflow: auto;
-    margin-top: 64px;
     border-radius: var(--md-sys-shape-corner-extra-large);
     background-color: var(--md-sys-color-background);
 }
 
 /* For compact and medium window classes */
 @media (max-width: 839px) {
-    .pane {
+    :host {
+        top: 0;
+        height: 100%;
         width: 100%;
-        min-height: 100%;
+        padding-top: 64px;
         padding-bottom: calc(64px + env(safe-area-inset-bottom));
     }
 }
 
 /* For expanded, large and extra-large window classes */
 @media (min-width: 840px) {
-    body {
-        overflow: hidden;
-    }
 
-    .pane {
-        position: fixed;
+    :host {
         top: 16px;
         left: 16px;
         right: 16px;
         bottom: 16px;
         width: calc(100% - 80px - (16px * 2) - env(safe-area-inset-left) - env(safe-area-inset-right));
+        margin-top: 64px;
         margin-left: calc(80px + env(safe-area-inset-left));
         margin-right: env(safe-area-inset-right);
     }

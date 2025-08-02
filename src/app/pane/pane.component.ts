@@ -16,9 +16,8 @@ export class PaneComponent {
   /**
    * Lifecycle hook that runs after component initialization.
    * 
-   * - Adds a temporary `.preload` class to the `.pane` element to prevent transitions on route load.
+   * - Adds a temporary `.preload` class to the pane element to prevent transitions on route load.
    * - Subscribes to router navigation events:
-   *    - Enables scrolling via the ScrollingService.
    *    - Scrolls to top after navigation.
    *    - If the URL contains a fragment, attempts to smoothly scroll to the corresponding element.
    * @returns {void}
@@ -27,7 +26,6 @@ export class PaneComponent {
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe(() => {
-        this.scrollingService.enableScroll();
         this.scrollingService.jumpToTop();
         const fragment = this.router.parseUrl(this.router.url).fragment;
         if (fragment) {
@@ -38,7 +36,7 @@ export class PaneComponent {
             }
           }, 0);
         }
-        const pane = document.querySelector('.pane');
+        const pane = document.querySelector('cxw-pane');
         if (pane) {
           pane.classList.add('preload');
           setTimeout(() => {

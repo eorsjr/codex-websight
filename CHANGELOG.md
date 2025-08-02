@@ -1,3 +1,34 @@
+# [2.0.0-rc.3](https://github.com/eorsjr/codex-websight/compare/v2.0.0-rc.2...v2.0.0-rc.3) (2025-08-02)
+
+
+### Bug Fixes
+
+* **buttons:** :pencil2: replace common-button with button ([0b71323](https://github.com/eorsjr/codex-websight/commit/0b71323c838ae3c6da0fcca2b9625f1c60d9594b))
+* **card:** :bug: add border-radius to clickable-image ([910dd82](https://github.com/eorsjr/codex-websight/commit/910dd822e36b5e17f430d6ffbf90f035e1c5ae10))
+
+
+### Code Refactoring
+
+* **elevation:** :fire: remove ElevationService ([92a38a7](https://github.com/eorsjr/codex-websight/commit/92a38a7fc49cff0e38c6d05104fb1125d443825a))
+* **layout:** :zap: refine scrolling with fixed body and scrollable pane ([4e82f2f](https://github.com/eorsjr/codex-websight/commit/4e82f2f58de2e98ccbb5f378fa33121bb5f0041e))
+
+
+### Features
+
+* **lightbox:** :lipstick: set text color to white ([4882eb5](https://github.com/eorsjr/codex-websight/commit/4882eb5f3447bf375f6cfcf5fe3def5b3d99c645))
+* **scrim:** remove blur effect ([f16d6dc](https://github.com/eorsjr/codex-websight/commit/f16d6dc0e1851a8ced0ca544ced027bc9a06b8e8))
+
+
+### BREAKING CHANGES
+
+* **elevation:** `ElevationService` is now removed. Any code that relies on the service will no longer function.
+* **layout:** - The global scrolling behavior has changed: `<body>` is now fixed, and main content scrolling occurs within the pane component.
+- The `ScrollingService` has been completely rewritten; direct calls to its previous functions will need to be updated.
+- Any code that relied on `<body>` element's scroll position or behavior (e.g., `window.scrollY`) will no longer function as expected and must be updated to target the pane.
+- The pane component is now referenced as `cxw-pane` instead of `.pane`.
+
+
+
 # [2.0.0-rc.2](https://github.com/eorsjr/codex-websight/compare/v2.0.0-rc.1...v2.0.0-rc.2) (2025-07-26)
 
 

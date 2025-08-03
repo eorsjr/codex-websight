@@ -1,3 +1,7 @@
+# [2.0.0-rc.5](https://github.com/eorsjr/codex-websight/compare/v2.0.0-rc.4...v2.0.0-rc.5) (2025-08-03)
+
+
+
 # [2.0.0-rc.4](https://github.com/eorsjr/codex-websight/compare/v2.0.0-rc.3...v2.0.0-rc.4) (2025-08-03)
 
 

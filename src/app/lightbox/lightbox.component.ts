@@ -1,4 +1,4 @@
-import { Component, HostBinding } from '@angular/core';
+import { Component, HostBinding, Input } from '@angular/core';
 import { LightboxService } from '../services/lightbox.service';
 import { CommonModule } from '@angular/common';
 import { IconButtonComponent } from '../buttons/icon-button/icon-button.component';

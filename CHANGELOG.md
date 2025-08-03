@@ -1,3 +1,29 @@
+# [2.0.0-rc.4](https://github.com/eorsjr/codex-websight/compare/v2.0.0-rc.3...v2.0.0-rc.4) (2025-08-03)
+
+
+### Code Refactoring
+
+* **navigation-rail:** :lipstick: update layout and adjust colors ([58c5d9e](https://github.com/eorsjr/codex-websight/commit/58c5d9e17bd697cc7f8d93242d110c4ddb5be29a))
+* **styles:** :truck: rename token related css files ([e841354](https://github.com/eorsjr/codex-websight/commit/e841354d1677336c23ce9e8b94b6627e0718c366))
+
+
+### Features
+
+* **a11y:** :wheelchair: add ARIA roles to lightbox buttons ([bce827d](https://github.com/eorsjr/codex-websight/commit/bce827d763b00caa48419990a3f2af1c327593f3))
+* **a11y:** :wheelchair: add ariaCurrentWhenActive to navigation items ([1a04d12](https://github.com/eorsjr/codex-websight/commit/1a04d12f9fe6dc87a8af0690ca77b0435d32893d))
+* **a11y:** :wheelchair: add option to attach aria-label to basic-dialog ([1e7efd9](https://github.com/eorsjr/codex-websight/commit/1e7efd9ead05fe6550e7c3551314c52540b8cfef))
+* **a11y:** :wheelchair: improve scrim accessibility ([2d3dd32](https://github.com/eorsjr/codex-websight/commit/2d3dd329fa5f7e6cf466441cf8cab12d78cdfbb4))
+* **a11y:** :wheelchair: update App Bar with ARIA roles and labels ([0ac3342](https://github.com/eorsjr/codex-websight/commit/0ac3342d9b4208673c9d8469dff4725fa276a182))
+* **a11y:** :wheelchair: update app component with ARIA roles and labels ([8165c40](https://github.com/eorsjr/codex-websight/commit/8165c40ddc8a20bd4d55619794b384c6bc0f4686))
+
+
+### BREAKING CHANGES
+
+* **navigation-rail:** The menu button is removed from the Navigation Rail. Use the scrim to close instead.
+* **styles:** Rename custom-shape-tokens.css to shape-tokens.css. Rename custom-elevation-levels.css to elevation-level-tokens.css.
+
+
+
 # [2.0.0-rc.3](https://github.com/eorsjr/codex-websight/compare/v2.0.0-rc.2...v2.0.0-rc.3) (2025-08-02)
 
 

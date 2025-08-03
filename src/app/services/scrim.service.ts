@@ -30,13 +30,32 @@ export class ScrimService {
   public hide(): void {
     this.isVisible.set(false);
     this.clickAction = () => { };
+    const scrim = document.querySelector('cxw-scrim') as HTMLElement;
+    if (scrim) {
+      scrim.setAttribute('aria-hidden', 'true');
+    }
   }
-  
+
   /**
    * Performs the click action associated with the scrim.
    * @returns {void}
    */
   public performClickAction(): void {
     this.clickAction();
+  }
+
+  /**
+   * Configures the interaction of the scrim.
+   * @param ariaLabel The aria-label to set for the scrim.
+   * @returns {void}
+   */
+  public configureInteraction(ariaLabel: string): void {
+    const scrim = document.querySelector('cxw-scrim') as HTMLElement;
+    if (scrim) {
+      scrim.style.cursor = 'pointer';
+      scrim.setAttribute('aria-label', ariaLabel);
+      scrim.setAttribute('role', 'button');
+      scrim.setAttribute('aria-hidden', 'false');
+    }
   }
 }

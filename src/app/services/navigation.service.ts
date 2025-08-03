@@ -21,8 +21,12 @@ export class NavigationService {
       const isOpen = !this.navigationRailOpen();
       this.navigationRailOpen.set(isOpen);
       rail.classList.toggle('navigation-rail--visible', isOpen);
-      if (isOpen) this.scrimService.show(2, () => this.toggleNavigationRail());
-      else this.scrimService.hide();
+      if (isOpen) {
+        this.scrimService.show(2, () => this.closeNavigationRail());
+        this.scrimService.configureInteraction('Close Navigation Rail');
+      } else {
+        this.scrimService.hide();
+      }
     }
   }
 

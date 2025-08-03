@@ -1,9 +1,10 @@
 <cxw-app-bar />
 <nav>
-    <cxw-navigation-bar />
-    <cxw-navigation-rail />
+    <cxw-navigation-bar role="region" aria-label="Navigation Bar" />
+    <cxw-navigation-rail role="region" aria-label="Navigation Rail" />
 </nav>
-<cxw-pane />
+<cxw-pane role="region" aria-label="Main content"/>
 <cxw-scrim />
-<cxw-lightbox />
-<cxw-fab aria-label="Go back to top" icon="vertical_align_top" (click)="scrollingService.scrollToTop()" />
+<cxw-lightbox role="dialog" aria-label="Lightbox" />
+<cxw-fab role="button" aria-label="'Go back to top'" icon="vertical_align_top"
+    (click)="scrollingService.scrollToTop()" />

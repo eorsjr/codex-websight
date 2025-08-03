@@ -1,7 +1,6 @@
 /* || Basic dialog */
 
 .basic-dialog {
-    display: none;
     flex-direction: column;
     position: fixed;
     border: none;
@@ -16,6 +15,10 @@
     min-width: 280px;
     max-width: 560px;
     padding: 24px;
+    
+    &[open] {
+        display: flex;
+    }
 }
 
 .basic-dialog__headline {

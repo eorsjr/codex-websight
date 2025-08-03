@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, ElementRef, Input, input, signal, ViewChild } from '@angular/core';
 import { ButtonComponent } from "../buttons/button/button.component";
 import { ScrimService } from '../services/scrim.service';
 
@@ -10,6 +10,8 @@ import { ScrimService } from '../services/scrim.service';
   styleUrl: './basic-dialog.component.css'
 })
 export class BasicDialogComponent {
+  @Input('aria-label') ariaLabel: string = 'Dialog';
+  @ViewChild('dialog') dialog!: ElementRef<HTMLDialogElement>;
 
   public isOpen = signal(false); // Signal to track whether the dialog is open
 
@@ -22,6 +24,7 @@ export class BasicDialogComponent {
   public openDialog(): void {
     this.isOpen.set(true);
     this.scrimService.show(3);
+    this.dialog.nativeElement.showModal();
   }
 
   /**
@@ -31,6 +34,7 @@ export class BasicDialogComponent {
   public closeDialog(): void {
     this.isOpen.set(false);
     this.scrimService.hide();
+    this.dialog.nativeElement.close();
   }
 
 }

@@ -1,5 +1,4 @@
-<dialog class="basic-dialog" [style.display]="isOpen() ? 'flex' : 'none'">
-
+<dialog class="basic-dialog" #dialog [attr.aria-label]="ariaLabel">
     <div class="basic-dialog__headline">
         <ng-content select="[headline]">Headline</ng-content>
     </div>
@@ -7,7 +6,7 @@
     <div class="basic-dialog__supporting-text">
         <ng-content select="[supporting-text]">Supporting text.</ng-content>
     </div>
-    
+
     <div class="basic-dialog__actions">
         <ng-content select="[actions]">
             <cxw-button shape="square" size="xs" color="text" label="Action 2" />

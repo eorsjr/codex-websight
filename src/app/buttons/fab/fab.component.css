@@ -31,7 +31,7 @@
 @media screen and (min-width: 840px) {
     .fab {
         z-index: 2;
-        top: calc(64px + 16px);
+        top: 20px;
         left: calc(20px + env(safe-area-inset-left));
         bottom: initial;
         right: initial;

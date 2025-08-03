@@ -37,7 +37,7 @@
                         <td *ngFor="let cell of row" (click)="this.copyTableService.copyText(cell)">{{ cell }}</td>
                     </tr>
                 </table>
-                <cxw-button size="m" label="Copy table" icon="content_copy"
+                <cxw-button size="m" label="Copy table" icon="content_copy" role="button" aria-label="Copy table"
                     (click)="this.copyTableService.copyTable(copyableTable1)" />
             </div>
         </div>

@@ -4,9 +4,9 @@
         <h2>Introduction</h2>
         <p>Many custom components are implemented. Learn more about some of them below.</p>
         <div class="action-area">
-            <cxw-button shape="square" color="tonal" label="Cards"
+            <cxw-button shape="square" color="tonal" label="Cards" role="button" aria-label="Go to cards section"
                 onclick="window.location.href='components#cards'"></cxw-button>
-            <cxw-button shape="square" color="tonal" label="Buttons"
+            <cxw-button shape="square" color="tonal" label="Buttons" role="button" aria-label="Go to buttons section"
                 onclick="window.location.href='components#buttons'"></cxw-button>
         </div>
     </cxw-card>
@@ -20,12 +20,12 @@
             <li>Cards have flexible layouts and dimensions</li>
         </ul>
         <div class="action-area">
-            <cxw-button shape="square" color="outlined" label="Elevated card"
-                onclick="window.location.href='components#elevated-card'" />
-            <cxw-button shape="square" color="outlined" label="Filled card"
+            <cxw-button shape="square" color="outlined" label="Elevated card" role="button"
+                aria-label="Go to elevated card" onclick="window.location.href='components#elevated-card'" />
+            <cxw-button shape="square" color="outlined" label="Filled card" role="button" aria-label="Go to filled card"
                 onclick="window.location.href='components#filled-card'" />
-            <cxw-button shape="square" color="outlined" label="Outlined card"
-                onclick="window.location.href='components#outlined-card'" />
+            <cxw-button shape="square" color="outlined" label="Outlined card" role="button"
+                aria-label="Go to outlined card" onclick="window.location.href='components#outlined-card'" />
         </div>
     </cxw-card>
     <cxw-card variant="elevated" id="elevated-card">
@@ -52,7 +52,8 @@
                 </ul>
             </div>
             <div class="card__side-by-side-right">
-                <p><img src="https://placehold.co/3000x2000" width="3000px" height="2000px" alt="Template Image 3000x2000"></p>
+                <p><img src="https://placehold.co/3000x2000" width="3000px" height="2000px"
+                        alt="Template Image 3000x2000"></p>
             </div>
         </div>
     </cxw-card>
@@ -63,8 +64,8 @@
             types.</p>
         <p>Fun fact: You can add multiple buttons next to each other in cards via the action area.</p>
         <div class="action-area">
-            <cxw-button color="tonal" />
-            <cxw-button color="tonal" icon="stars" />
+            <cxw-button color="tonal" role="button" aria-label="Button" />
+            <cxw-button color="tonal" icon="stars" role="button" aria-label="Button with icon" />
         </div>
     </cxw-card>
     <cxw-card variant="elevated" id="buttons">
@@ -79,10 +80,13 @@
         <p>See some examples below. For information about usage guidelines, visit <a
                 href="https://material.io/components/buttons/guidelines" target="_blank">Material Design</a>.</p>
         <div class="action-area">
-            <cxw-button size="m" shape="round" label="Filled medium button" />
-            <cxw-button shape="round" color="tonal" label="Tonal button with icon" icon="stars" />
-            <cxw-button shape="square" color="outlined" label="Outlined square button" />
-            <cxw-button color="text" label="Text button" />
+            <cxw-button size="m" shape="round" label="Filled medium button" role="button"
+                aria-label="Filled medium button" />
+            <cxw-button shape="round" color="tonal" label="Tonal button with icon" icon="stars" role="button"
+                aria-label="Tonal button with icon" />
+            <cxw-button shape="square" color="outlined" label="Outlined square button" role="button"
+                aria-label="Outlined square button" />
+            <cxw-button color="text" label="Text button" role="button" aria-label="Text button" />
         </div>
     </cxw-card>
 </main>

@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './slideshow.component.css'
 })
 export class SlideshowComponent {
-  
+
   @Input() images: { src: string; alt?: string }[] = []; // Array of images to display in the slideshow
   currentIndex = 0; // Index of the currently displayed image
   private intervalId: any; // Reference to the slideshow interval timer
@@ -31,7 +31,7 @@ export class SlideshowComponent {
    * @returns {void}
    */
   ngOnDestroy(): void {
-    clearTimeout(this.intervalId);
+    clearInterval(this.intervalId);
   }
 
   /**

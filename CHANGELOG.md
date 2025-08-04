@@ -1,3 +1,23 @@
+# [2.0.0-rc.6](https://github.com/eorsjr/codex-websight/compare/v2.0.0-rc.5...v2.0.0-rc.6) (2025-08-04)
+
+
+### Bug Fixes
+
+* **slideshow:** :bug: replace clearTimeout with clearInterval ([e308317](https://github.com/eorsjr/codex-websight/commit/e3083175d973d6f5c9530d2f833b364a856a87ac))
+
+
+### Code Refactoring
+
+* **lightbox:** :dizzy: refine image fade transition and BEM naming ([0e80e00](https://github.com/eorsjr/codex-websight/commit/0e80e00e6952c23d501a75029cd381290f304d79))
+
+
+### BREAKING CHANGES
+
+* **lightbox:** - External CSS targeting `.lightbox__image.fade-in` will no longer apply. Update selectors to `.lightbox__image--fade-in`.
+- Any external CSS targeting `div.lightbox__caption` will no longer apply. Update selectors to `span.lightbox__caption` or `.lightbox__caption` to match the new element.
+
+
+
 # [2.0.0-rc.5](https://github.com/eorsjr/codex-websight/compare/v2.0.0-rc.4...v2.0.0-rc.5) (2025-08-03)
 
 

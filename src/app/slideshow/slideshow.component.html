@@ -1,2 +1,2 @@
 <img *ngFor="let image of images; let i = index" class="slideshow__image" [src]="image.src" [alt]="image.alt"
-  [style.display]="i === currentIndex ? 'block' : 'none'" width="100%" height="auto" />
+  [class.slideshow__image--active]="i === currentIndex" [class.slideshow__image--inactive]="i !== currentIndex" />

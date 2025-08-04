@@ -6,23 +6,25 @@
     justify-content: center;
     align-items: center;
     aspect-ratio: 2.4/1;
+    width: 100%;
+    overflow: hidden;
 }
 
 .slideshow__image {
-    display: none;
+    position: absolute; 
     object-fit: cover;
     height: 100%;
     width: 100%;
-    animation-name: fade;
-    animation-duration: 3s;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
 }
 
-@keyframes fade {
-    from {
-        opacity: 0
-    }
+.slideshow__image--active {
+    opacity: 1;
+    z-index: 1;
+}
 
-    to {
-        opacity: 1
-    }
+.slideshow__image--inactive {
+    opacity: 0;
+    z-index: 0;
 }

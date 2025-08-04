@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterModule, Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { ScrollingService } from '../services/scrolling.service';
@@ -10,13 +10,17 @@ import { ScrollingService } from '../services/scrolling.service';
   templateUrl: './pane.component.html',
   styleUrl: './pane.component.css'
 })
-export class PaneComponent {
+export class PaneComponent implements OnInit {
+
+  currentYear!: number;
+
   constructor(private router: Router, private scrollingService: ScrollingService) { }
 
   /**
    * Lifecycle hook that runs after component initialization.
    * 
    * - Adds a temporary `.preload` class to the pane element to prevent transitions on route load.
+   * - Sets the current year for the footer.
    * - Subscribes to router navigation events:
    *    - Scrolls to top after navigation.
    *    - If the URL contains a fragment, attempts to smoothly scroll to the corresponding element.
@@ -36,6 +40,7 @@ export class PaneComponent {
             }
           }, 0);
         }
+
         const pane = document.querySelector('cxw-pane');
         if (pane) {
           pane.classList.add('preload');
@@ -44,5 +49,7 @@ export class PaneComponent {
           }, 100);
         }
       });
+
+      this.currentYear = new Date().getFullYear();
   }
 }

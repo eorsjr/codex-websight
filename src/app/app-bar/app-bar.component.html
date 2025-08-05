@@ -18,7 +18,7 @@
     </div>
 </header>
 
-<cxw-basic-dialog #colorPaletteDialog aria-label="Color palette dialog">
+<cxw-basic-dialog #colorPaletteDialog role="dialog" aria-label="Switch color palette">
     <ng-container headline>Switch Color Palette</ng-container>
     <ng-container supporting-text>Choose your color palette.</ng-container>
     <ng-container actions>
@@ -30,7 +30,8 @@
             aria-label="Switch to yellow color palette" (click)="themeService.switchToTheme('yellow')" />
         <cxw-button shape="square" size="xs" color="text" label="Orange" role="button"
             aria-label="Switch to orange color palette" (click)="themeService.switchToTheme('orange')" />
-        <cxw-button shape="square" size="xs" color="text" label="Pink" (click)="themeService.switchToTheme('pink')" />
+        <cxw-button shape="square" size="xs" color="text" label="Pink" role="button"
+            aria-label="Switch to pink color palette" (click)="themeService.switchToTheme('pink')" />
         <cxw-button shape="square" size="xs" color="text" label="Baseline" role="button"
             aria-label="Switch to baseline color palette" (click)="themeService.switchToTheme('baseline')" />
         <cxw-button shape="square" size="xs" color="text" label="Blue" role="button"
@@ -40,7 +41,7 @@
     </ng-container>
 </cxw-basic-dialog>
 
-<cxw-basic-dialog #fontDialog aria-label="Font dialog">
+<cxw-basic-dialog #fontDialog role="dialog" aria-label="Switch font">
     <ng-container headline>Switch Font</ng-container>
     <ng-container supporting-text>Choose your font.</ng-container>
     <ng-container actions>

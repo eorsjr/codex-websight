@@ -1,3 +1,13 @@
+# [2.0.0-rc.7](https://github.com/eorsjr/codex-websight/compare/v2.0.0-rc.6...v2.0.0-rc.7) (2025-08-05)
+
+
+### Bug Fixes
+
+* **a11y:** :wheelchair: add missing ARIA roles to dialogs ([4c614ab](https://github.com/eorsjr/codex-websight/commit/4c614ab5faa97b5e8e974d450c0f1540847bba4e))
+* **a11y:** :wheelchair: remove ARIA role from app-bar ([00632e6](https://github.com/eorsjr/codex-websight/commit/00632e66eb998a9e9154263322aba2a1000406e1))
+
+
+
 # [2.0.0-rc.6](https://github.com/eorsjr/codex-websight/compare/v2.0.0-rc.5...v2.0.0-rc.6) (2025-08-04)
 
 

@@ -53,13 +53,15 @@ export class ScrollingService {
   }
 
   /**
-   * Scrolls the pane to the top smoothly.
+   * Scrolls the pane to the top smoothly, and resets the URL.
    * @returns {void}
    */
   public scrollToTop(): void {
     if (this.pane) {
       this.pane.scrollTo({ top: 0, behavior: 'smooth' as ScrollBehavior });
     }
+    const cleanUrl = window.location.href.split('#')[0];
+    window.history.replaceState({}, document.title, cleanUrl);
   }
 
   /**

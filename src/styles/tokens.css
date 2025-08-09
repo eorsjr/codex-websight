@@ -37,3 +37,53 @@
     --md-sys-shape-corner-extra-extra-large: 48px;
     --md-sys-shape-corner-full: 100px;
 }
+
+/* || Tokens - Motion */
+
+:root {
+    /* Motion - Duration */
+    --md-sys-motion-duration-short-1: 50ms;
+    --md-sys-motion-duration-short-2: 100ms;
+    --md-sys-motion-duration-short-3: 150ms;
+    --md-sys-motion-duration-short-4: 200ms;
+    --md-sys-motion-duration-medium-1: 250ms;
+    --md-sys-motion-duration-medium-2: 300ms;
+    --md-sys-motion-duration-medium-3: 350ms;
+    --md-sys-motion-duration-medium-4: 400ms;
+    --md-sys-motion-duration-long-1: 450ms;
+    --md-sys-motion-duration-long-2: 500ms;
+    --md-sys-motion-duration-long-3: 550ms;
+    --md-sys-motion-duration-long-4: 600ms;
+    --md-sys-motion-duration-extra-long-1: 700ms;
+    --md-sys-motion-duration-extra-long-2: 800ms;
+    --md-sys-motion-duration-extra-long-3: 900ms;
+    --md-sys-motion-duration-extra-long-4: 1000ms;
+
+    /* Motion - Ease (Expressive) */
+    --md-sys-motion-ease-expressive-fast-spatial: cubic-bezier(0.42, 1.67, 0.21, 0.90);
+    --md-sys-motion-ease-expressive-default-spatial: cubic-bezier(0.38, 1.21, 0.22, 1.00);
+    --md-sys-motion-ease-expressive-slow-spatial: cubic-bezier(0.39, 1.29, 0.35, 0.98);
+    --md-sys-motion-ease-expressive-fast-effects: cubic-bezier(0.31, 0.94, 0.34, 1.00);
+    --md-sys-motion-ease-expressive-default-effects: cubic-bezier(0.34, 0.80, 0.34, 1.00);
+    --md-sys-motion-ease-expressive-slow-effects: cubic-bezier(0.34, 0.88, 0.34, 1.00);
+
+    /* Motion - Ease (Standard) */
+    --md-sys-motion-ease-standard-spatial: cubic-bezier(0.27, 1.06, 0.18, 1.00);
+    --md-sys-motion-ease-standard-effects: cubic-bezier(0.34, 0.80, 0.34, 1.00);
+
+    /* Motion - Spring (Expressive) */
+    --md-sys-motion-spring-expressive-fast-spatial: 350ms var(--md-sys-motion-ease-expressive-fast-spatial);
+    --md-sys-motion-spring-expressive-default-spatial: 500ms var(--md-sys-motion-ease-expressive-default-spatial);
+    --md-sys-motion-spring-expressive-slow-spatial: 650ms var(--md-sys-motion-ease-expressive-slow-spatial);
+    --md-sys-motion-spring-expressive-fast-effects: 150ms var(--md-sys-motion-ease-expressive-fast-effects);
+    --md-sys-motion-spring-expressive-default-effects: 200ms var(--md-sys-motion-ease-expressive-default-effects);
+    --md-sys-motion-spring-expressive-slow-effects: 300ms var(--md-sys-motion-ease-expressive-slow-effects);
+
+    /* Motion - Spring (Standard) */
+    --md-sys-motion-spring-standard-fast-spatial: 350ms var(--md-sys-motion-ease-standard-spatial);
+    --md-sys-motion-spring-standard-default-spatial: 500ms var(--md-sys-motion-ease-standard-spatial);
+    --md-sys-motion-spring-standard-slow-spatial: 750ms var(--md-sys-motion-ease-standard-spatial);
+    --md-sys-motion-spring-standard-fast-effects: 150ms var(--md-sys-motion-ease-standard-effects);
+    --md-sys-motion-spring-standard-default-effects: 200ms var(--md-sys-motion-ease-standard-effects);
+    --md-sys-motion-spring-standard-slow-effects: 300ms var(--md-sys-motion-ease-standard-effects);
+}

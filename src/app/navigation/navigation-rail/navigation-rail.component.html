@@ -1,31 +1,31 @@
 <div class="navigation-rail__items">
     <button class="navigation-rail__item" aria-label="Home" routerLink="/"
         routerLinkActive="navigation-rail__item--active" [routerLinkActiveOptions]="{ exact: true }"
-        ariaCurrentWhenActive="page" (click)="navService.toggleNavigationRail();">
+        ariaCurrentWhenActive="page" (click)="navService.toggleNavigationRail();scrollingService.scrollToTop();">
         <span class="material-symbols-outlined navigation-rail__item-icon">home</span>
         <span class="navigation-rail__item-label-text">Home</span>
     </button>
     <button class="navigation-rail__item" aria-label="Components" routerLink="/components"
         routerLinkActive="navigation-rail__item--active" ariaCurrentWhenActive="page"
-        (click)="navService.toggleNavigationRail();">
+        (click)="navService.toggleNavigationRail();scrollingService.scrollToTop()">
         <span class="material-symbols-outlined navigation-rail__item-icon">dashboard</span>
         <span class="navigation-rail__item-label-text">Components</span>
     </button>
     <button class="navigation-rail__item" aria-label="Extras" routerLink="/extras"
         routerLinkActive="navigation-rail__item--active" ariaCurrentWhenActive="page"
-        (click)="navService.toggleNavigationRail();">
+        (click)="navService.toggleNavigationRail();scrollingService.scrollToTop()">
         <span class="material-symbols-outlined navigation-rail__item-icon">extension</span>
         <span class="navigation-rail__item-label-text">Extras</span>
     </button>
     <button class="navigation-rail__item" aria-label="Visuals" routerLink="/visuals"
         routerLinkActive="navigation-rail__item--active" ariaCurrentWhenActive="page"
-        (click)="navService.toggleNavigationRail();">
+        (click)="navService.toggleNavigationRail();scrollingService.scrollToTop()">
         <span class="material-symbols-outlined navigation-rail__item-icon">photo</span>
         <span class="navigation-rail__item-label-text">Visuals</span>
     </button>
     <button class="navigation-rail__item" aria-label="Contact" routerLink="/contact"
         routerLinkActive="navigation-rail__item--active" ariaCurrentWhenActive="page"
-        (click)="navService.toggleNavigationRail();">
+        (click)="navService.toggleNavigationRail();scrollingService.scrollToTop()">
         <span class="material-symbols-outlined navigation-rail__item-icon">contact_page</span>
         <span class="navigation-rail__item-label-text">Contact</span>
     </button>

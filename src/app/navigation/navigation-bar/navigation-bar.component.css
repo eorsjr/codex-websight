@@ -1,7 +1,5 @@
 /* || Navigation Bar */
 
-/* || Navigation Bar - Common */
-
 :host {
   display: flex;
   position: fixed;
@@ -12,7 +10,6 @@
   /* IE and Edge */
   width: 100%;
   bottom: 0;
-  justify-content: space-evenly;
   min-height: 64px;
   box-shadow: var(--elevation-level-2);
   background-color: var(--md-sys-color-surface-container);
@@ -64,6 +61,7 @@
 @media (max-width: 599px) {
 
   :host {
+    justify-content: space-evenly;
     padding-top: 6px;
   }
 
@@ -148,14 +146,15 @@
 @media (min-width: 600px) and (max-width: 839px) {
 
   :host {
+    justify-content: center;
     padding-top: 12px;
   }
 
 
   .navigation-bar__item {
     height: 40px;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
     gap: 4px;
     border-radius: var(--md-sys-shape-corner-full);
 

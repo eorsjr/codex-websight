@@ -1,7 +1,5 @@
 @import "./styles/buttons.css";
 @import "./styles/cards.css";
-@import "./styles/elevation-level-tokens.css";
-@import "./styles/shape-tokens.css";
 @import './styles/general.css';
 @import "./styles/theme-baseline.css";
 @import "./styles/theme-blue.css";
@@ -10,3 +8,4 @@
 @import "./styles/theme-pink.css";
 @import "./styles/theme-silver.css";
 @import "./styles/theme-yellow.css";
+@import "./styles/tokens.css";

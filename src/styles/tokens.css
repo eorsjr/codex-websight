@@ -1,4 +1,6 @@
-/* || Elevation level tokens */
+/* Tokens */
+
+/* || Tokens - Elevation levels */
 
 :root {
     --elevation-level-0: none;
@@ -19,4 +21,19 @@
     --elevation-level-5:
         0px 4px 4px 0px rgba(0, 0, 0, 0.3),
         0px 8px 12px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* || Tokens - Shapes */
+
+:root {
+    --md-sys-shape-corner-none: 0px;
+    --md-sys-shape-corner-extra-small: 4px;
+    --md-sys-shape-corner-small: 8px;
+    --md-sys-shape-corner-medium: 12px;
+    --md-sys-shape-corner-large: 16px;
+    --md-sys-shape-corner-large-increased: 20px;
+    --md-sys-shape-corner-extra-large: 28px;
+    --md-sys-shape-corner-extra-large-increased: 32px;
+    --md-sys-shape-corner-extra-extra-large: 48px;
+    --md-sys-shape-corner-full: 100px;
 }

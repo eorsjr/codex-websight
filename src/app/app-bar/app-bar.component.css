@@ -29,10 +29,6 @@
     color: var(--md-sys-color-on-surface);
 }
 
-.app-bar__text-container {
-    margin-left: 4px;
-}
-
 .app-bar__text-container--centered {
     position: fixed;
     left: 0;
@@ -67,7 +63,7 @@
 /* For medium, expanded, large and extra-large window classes */
 @media (min-width: 840px) {
     .app-bar {
-        padding-left: calc(96px + env(safe-area-inset-left));
+        padding-left: calc(96px + 4px + env(safe-area-inset-left));
         box-shadow: none;
     }
 

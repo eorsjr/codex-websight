@@ -105,50 +105,60 @@ footer {
     overflow-x: auto;
     margin: 0;
     margin-bottom: 16px;
+    border: 1px solid;
+    border-radius: var(--md-sys-shape-corner-extra-large);
+    background-color: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
 }
 
 table {
     width: 100%;
-    border-collapse: collapse;
-    background-color: var(--md-sys-color-secondary-container);
-    color: var(--md-sys-color-on-secondary-container);
+    border-collapse: separate;
+    border-spacing: 0;
+    text-align: left;
 }
 
 td,
 th {
     padding: 20px;
-    border: 1px solid;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+td:last-child,
+th:last-child {
+    border-right: none;
 }
 
 td {
+    position: relative;
     cursor: pointer;
 }
 
-@media (hover:none) {
-    td {
-        transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
-    }
-
-    td:active {
-        background-color: var(--md-sys-color-inverse-surface);
-        color: var(--md-sys-color-inverse-on-surface);
-        transition: none;
-    }
+td::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--md-sys-color-on-secondary-container);
+    opacity: 0;
+    transition:
+        opacity var(--md-sys-motion-spring-standard-slow-effects);
 }
 
 @media (hover:hover) {
-    td {
-        transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+    td:hover::before {
+        opacity: 0.08;
     }
+}
 
-    td:hover {
-        background-color: var(--md-sys-color-inverse-surface);
-        color: var(--md-sys-color-inverse-on-surface);
-    }
-
-    td:active {
-        background-color: var(--md-sys-color-surface);
-        color: var(--md-sys-color-on-surface);
-        transition: none;
-    }
+td:active::before {
+    opacity: 0.1;
+    transition: none;
 }

@@ -1,0 +1,79 @@
+{
+  "configVersion": 1,
+  "timestamp": 1754736741098,
+  "index": "/codex-websight/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/codex-websight/favicon.ico",
+        "/codex-websight/index.html",
+        "/codex-websight/main-J2D3KGFK.js",
+        "/codex-websight/manifest.webmanifest",
+        "/codex-websight/polyfills-FFHMD2TL.js",
+        "/codex-websight/styles-3R6VMV2G.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/codex-websight/icons/icon-128x128.png",
+        "/codex-websight/icons/icon-144x144.png",
+        "/codex-websight/icons/icon-152x152.png",
+        "/codex-websight/icons/icon-192x192.png",
+        "/codex-websight/icons/icon-384x384.png",
+        "/codex-websight/icons/icon-512x512.png",
+        "/codex-websight/icons/icon-72x72.png",
+        "/codex-websight/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/codex-websight/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
+    "/codex-websight/icons/icon-128x128.png": "f912963bdc6d5a38d8f1dd0afbaab2ce8d657acb",
+    "/codex-websight/icons/icon-144x144.png": "b155fd5f2fd5d2ea7760721063003c4cd95fd783",
+    "/codex-websight/icons/icon-152x152.png": "eae6e0f0c8afb8aaae339e2a569b43e9238e5e6c",
+    "/codex-websight/icons/icon-192x192.png": "15c4180454633880d98674aa7394656196c91584",
+    "/codex-websight/icons/icon-384x384.png": "94a915751ef6c9282df9aea405ad679230631814",
+    "/codex-websight/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
+    "/codex-websight/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
+    "/codex-websight/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
+    "/codex-websight/index.html": "8750f78e51dc3eea6a9a6874d38e724ecd29f551",
+    "/codex-websight/main-J2D3KGFK.js": "9bd112deb2830532476d2ffb4358405c6da103d5",
+    "/codex-websight/manifest.webmanifest": "10359a930cb22fc76535cdbe0a8b5944a597b396",
+    "/codex-websight/polyfills-FFHMD2TL.js": "f49b49a155bc7d192db62a4c15d0a612b460a667",
+    "/codex-websight/styles-3R6VMV2G.css": "d116eaf7003718c9ee2eff8430b3fc0bb12a515b"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}

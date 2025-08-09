@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { ScrollingService } from '../../services/scrolling.service';
+import { ScrollService } from '../../services/scroll.service';
 
 @Component({
   selector: 'cxw-navigation-bar',
@@ -10,5 +10,5 @@ import { ScrollingService } from '../../services/scrolling.service';
   styleUrl: './navigation-bar.component.css'
 })
 export class NavigationBarComponent {
-  constructor(public scrollingService: ScrollingService) {}
+  constructor(public scrollService: ScrollService) {}
 }

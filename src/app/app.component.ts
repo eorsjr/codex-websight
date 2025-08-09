@@ -6,7 +6,7 @@ import { LightboxComponent } from './lightbox/lightbox.component';
 import { FabComponent } from "./buttons/fab/fab.component";
 import { ThemeService } from './services/theme.service';
 import { NavigationService } from './services/navigation.service';
-import { ScrollingService } from './services/scrolling.service';
+import { ScrollService } from './services/scroll.service';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { NavigationBarComponent } from "./navigation/navigation-bar/navigation-bar.component";
@@ -21,7 +21,7 @@ import { NavigationRailComponent } from "./navigation/navigation-rail/navigation
 export class AppComponent {
   title = 'codex-websight';
 
-  constructor(private router: Router, private themeService: ThemeService, private navigationService: NavigationService, public scrollingService: ScrollingService) {
+  constructor(private router: Router, private themeService: ThemeService, private navigationService: NavigationService, public scrollService: ScrollService) {
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe(() => {
@@ -36,7 +36,7 @@ export class AppComponent {
     setTimeout(() => {
       this.themeService.updateThemeColor();
     });
-    this.scrollingService.initialize();
+    this.scrollService.initialize();
     this.navigationService.setupAutoCloseOnResize();
   }
 }

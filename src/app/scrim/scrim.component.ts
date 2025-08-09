@@ -1,5 +1,5 @@
 import { Component, effect, HostBinding, HostListener } from '@angular/core';
-import { ScrollingService } from '../services/scrolling.service';
+import { ScrollService } from '../services/scroll.service';
 import { ScrimService } from '../services/scrim.service';
 
 @Component({
@@ -10,12 +10,12 @@ import { ScrimService } from '../services/scrim.service';
 })
 export class ScrimComponent {
 
-  constructor(private scrollingService: ScrollingService, public scrimService: ScrimService) {
+  constructor(private scrollService: ScrollService, public scrimService: ScrimService) {
     effect(() => {
       if (scrimService.isVisible()) {
-        this.scrollingService.disableScroll();
+        this.scrollService.disableScroll();
       } else {
-        this.scrollingService.enableScroll();
+        this.scrollService.enableScroll();
       }
     });
   }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterModule, Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
-import { ScrollingService } from '../services/scrolling.service';
+import { ScrollService } from '../services/scroll.service';
 
 @Component({
   selector: 'cxw-pane',
@@ -14,7 +14,7 @@ export class PaneComponent implements OnInit {
 
   currentYear!: number;
 
-  constructor(private router: Router, private scrollingService: ScrollingService) { }
+  constructor(private router: Router, private scrollService: ScrollService) { }
 
   /**
    * Lifecycle hook that runs after component initialization.
@@ -30,7 +30,7 @@ export class PaneComponent implements OnInit {
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe(() => {
-        this.scrollingService.jumpToTop();
+        this.scrollService.jumpToTop();
         const fragment = this.router.parseUrl(this.router.url).fragment;
         if (fragment) {
           setTimeout(() => {

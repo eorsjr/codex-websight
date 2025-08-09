@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { NavigationService } from '../../services/navigation.service';
-import { ScrollingService } from '../../services/scrolling.service';
+import { ScrollService } from '../../services/scroll.service';
 
 @Component({
   selector: 'cxw-navigation-rail',
@@ -13,5 +13,5 @@ import { ScrollingService } from '../../services/scrolling.service';
 })
 export class NavigationRailComponent {
 
-  constructor(public navService: NavigationService, public scrollingService: ScrollingService) { }
+  constructor(public navService: NavigationService, public scrollService: ScrollService) { }
 }

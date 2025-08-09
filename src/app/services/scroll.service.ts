@@ -5,7 +5,7 @@ import { effect } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class ScrollingService {
+export class ScrollService {
 
   private pane: HTMLElement | null = null; // Pane element
   private railOpen = false; // Tracks if the navigation rail is open
@@ -19,7 +19,7 @@ export class ScrollingService {
   }
 
   /**
-   * Initializes the ScrollingService.
+   * Initializes the ScrollService.
    * @returns {void}
    */
   public initialize(): void {

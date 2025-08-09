@@ -91,10 +91,6 @@
     color: var(--md-sys-color-on-secondary-container);
   }
 
-  .navigation-bar__item-icon {
-    position: relative;
-  }
-
   .navigation-bar__item-icon::before {
     content: '';
     position: absolute;

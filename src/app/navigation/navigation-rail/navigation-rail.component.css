@@ -181,10 +181,6 @@
     color: var(--md-sys-color-secondary);
   }
 
-  .navigation-rail__item-icon {
-    position: relative;
-  }
-
   .navigation-rail__item-icon::before {
     content: '';
     position: absolute;

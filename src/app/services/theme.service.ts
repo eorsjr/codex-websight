@@ -6,17 +6,17 @@ import { signal } from '@angular/core';
 })
 export class ThemeService {
 
-  private themes = ["silver", "green", "yellow", "orange", "pink", "baseline", "blue"]; // Available themes
+  private palettes = ["silver", "green", "yellow", "orange", "pink", "baseline", "blue"]; // Available color palettes
 
   public isDarkMode = signal(document.body.classList.contains('dark')); // Signal to track whether the current color scheme is dark mode.
 
   /**
-   * Applies the initial theme from local storage or falls back to the default.
+   * Applies the initial color palette from local storage or falls back to the default.
    * @returns {void}
    */
-  public setInitialTheme(): void {
-    const selectedTheme = this.getStoredOrDefault("theme", 'silver');
-    document.body.className = selectedTheme;
+  public initColorPalette(): void {
+    const selectedPalette = this.getStoredOrDefault("palette", 'silver');
+    document.body.className = selectedPalette;
   }
 
   /**
@@ -24,7 +24,7 @@ export class ThemeService {
    * Uses a delayed execution to ensure headers are rendered.
    * @returns {void}
    */
-  public setInitialFont(): void {
+  public initFont(): void {
     const selectedFont = this.getStoredOrDefault("font", 'Noto Sans');
     setTimeout(() => {
       this.applyFont(selectedFont);
@@ -35,11 +35,11 @@ export class ThemeService {
    * Applies the initial color scheme (dark or light) based on local storage or system preference.
    * @returns {void}
    */
-  public setInitialColorScheme(): void {
-    const darkThemeLocalStorageValue = this.getLocalStorage("dark");
+  public initColorScheme(): void {
+    const darkSchemeLocalStorageValue = this.getLocalStorage("dark");
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const isDark = darkThemeLocalStorageValue === "true" ||
-      (darkThemeLocalStorageValue === "" && prefersDarkScheme);
+    const isDark = darkSchemeLocalStorageValue === "true" ||
+      (darkSchemeLocalStorageValue === "" && prefersDarkScheme);
 
     if (isDark) {
       document.body.classList.add('dark');
@@ -50,15 +50,15 @@ export class ThemeService {
   }
 
   /**
-   * Switches to the desireed theme and updates local storage.
+   * Switches to the desired color palette and updates local storage.
    * Also updates the browser's theme color meta tag.
-   * @param theme Desired theme.
+   * @param palette Desired color palette.
    * @returns {void}
    */
-  public switchToTheme(theme: string): void {
-    document.body.classList.remove(...this.themes);
-    document.body.classList.add(theme);
-    this.setLocalStorage("theme", theme);
+  public switchToColorPalette(palette: string): void {
+    document.body.classList.remove(...this.palettes);
+    document.body.classList.add(palette);
+    this.setLocalStorage("palette", palette);
     this.updateThemeColor();
   }
 

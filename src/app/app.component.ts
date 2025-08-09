@@ -25,13 +25,13 @@ export class AppComponent {
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe(() => {
-        this.themeService.setInitialFont();
+        this.themeService.initFont();
       });
   }
 
   ngAfterViewInit() {
-    this.themeService.setInitialTheme();
-    this.themeService.setInitialColorScheme();
+    this.themeService.initColorPalette();
+    this.themeService.initColorScheme();
     this.themeService.handleColorSchemeChange();
     setTimeout(() => {
       this.themeService.updateThemeColor();

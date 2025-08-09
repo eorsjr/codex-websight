@@ -27,6 +27,7 @@
 }
 
 :host(.navigation-bar--hidden) {
+  box-shadow: none;
   transform: translateY(100%);
 }
 

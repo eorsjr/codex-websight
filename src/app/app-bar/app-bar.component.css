@@ -19,6 +19,7 @@
 }
 
 .app-bar--hidden {
+    box-shadow: none;
     transform: translateY(-100%);
 }
 

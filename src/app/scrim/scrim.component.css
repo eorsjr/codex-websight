@@ -4,13 +4,14 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: var(--md-sys-color-scrim);
+    opacity: 0;
     pointer-events: none;
     transition:
-      background-color var(--md-sys-motion-spring-standard-slow-effects);
+      opacity var(--md-sys-motion-spring-standard-slow-effects);
 }
 
 :host(.scrim--visible) {
     pointer-events: auto;
-    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0.6;
 }

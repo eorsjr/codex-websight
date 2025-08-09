@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1754736741098,
+  "timestamp": 1754752434131,
   "index": "/codex-websight/index.html",
   "assetGroups": [
     {
@@ -13,10 +13,10 @@
       "urls": [
         "/codex-websight/favicon.ico",
         "/codex-websight/index.html",
-        "/codex-websight/main-J2D3KGFK.js",
+        "/codex-websight/main-BHSMVQPV.js",
         "/codex-websight/manifest.webmanifest",
         "/codex-websight/polyfills-FFHMD2TL.js",
-        "/codex-websight/styles-3R6VMV2G.css"
+        "/codex-websight/styles-GRVZ2TA4.css"
       ],
       "patterns": []
     },
@@ -51,11 +51,11 @@
     "/codex-websight/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
     "/codex-websight/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
     "/codex-websight/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
-    "/codex-websight/index.html": "8750f78e51dc3eea6a9a6874d38e724ecd29f551",
-    "/codex-websight/main-J2D3KGFK.js": "9bd112deb2830532476d2ffb4358405c6da103d5",
+    "/codex-websight/index.html": "2bce4110b2c3374ae83cdb9dfbf5be13683c8c1a",
+    "/codex-websight/main-BHSMVQPV.js": "e93bce6ae8099e5fd062f818863d01dacee55da2",
     "/codex-websight/manifest.webmanifest": "10359a930cb22fc76535cdbe0a8b5944a597b396",
     "/codex-websight/polyfills-FFHMD2TL.js": "f49b49a155bc7d192db62a4c15d0a612b460a667",
-    "/codex-websight/styles-3R6VMV2G.css": "d116eaf7003718c9ee2eff8430b3fc0bb12a515b"
+    "/codex-websight/styles-GRVZ2TA4.css": "c8e157d24419dbc50b613813c3b1e0ced0b33f9b"
   },
   "navigationUrls": [
     {

@@ -15,7 +15,9 @@
     background-color: var(--md-sys-color-surface-container);
     box-shadow: var(--elevation-level-2);
     transform: translateY(0);
-    transition: box-shadow 250ms ease-in-out, transform 0.5s ease;
+    transition:
+        transform var(--md-sys-motion-spring-standard-slow-spatial),
+        box-shadow var(--md-sys-motion-spring-standard-slow-effects);
 }
 
 .app-bar--hidden {

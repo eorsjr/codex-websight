@@ -7,6 +7,7 @@
     position: fixed;
     z-index: 1;
     right: calc(16px + env(safe-area-inset-right));
+    box-shadow: var(--elevation-level-3);
     transform: translateY(0);
 }
 
@@ -21,6 +22,7 @@
     }
 }
 
+/* For expanded, large and extra-large window classes */
 @media screen and (min-width: 840px) {
     .fab {
         z-index: 2;
@@ -68,133 +70,108 @@
 .fab--color-tonal-primary {
     background-color: var(--md-sys-color-primary-container);
     color: var(--md-sys-color-on-primary-container);
-    box-shadow: var(--elevation-level-3);
 }
 
 .fab--color-tonal-secondary {
     background-color: var(--md-sys-color-secondary-container);
     color: var(--md-sys-color-on-secondary-container);
-    box-shadow: var(--elevation-level-3);
 }
 
 .fab--color-tonal-tertiary {
     background-color: var(--md-sys-color-tertiary-container);
     color: var(--md-sys-color-on-tertiary-container);
-    box-shadow: var(--elevation-level-3);
 }
 
 .fab--color-primary {
     background-color: var(--md-sys-color-primary);
     color: var(--md-sys-color-on-primary);
-    box-shadow: var(--elevation-level-3);
 }
 
 .fab--color-secondary {
     background-color: var(--md-sys-color-secondary);
     color: var(--md-sys-color-on-secondary);
-    box-shadow: var(--elevation-level-3);
 }
 
 .fab--color-tertiary {
     background-color: var(--md-sys-color-tertiary);
     color: var(--md-sys-color-on-tertiary);
-    box-shadow: var(--elevation-level-3);
 }
 
-/* || FAB - State */
+/* || FAB - States */
 
 .fab {
-    transition: transform 0.5s ease, background-color 250ms ease-in-out, color 250ms ease-in-out, box-shadow 250ms ease-in-out;
+    transition:
+        transform var(--md-sys-motion-spring-expressive-slow-spatial),
+        box-shadow var(--md-sys-motion-spring-standard-slow-effects);
 }
 
-@media (hover: none) {
-    .fab:active {
-        box-shadow: var(--elevation-level-4);
-        transition: none;
-    }
+.fab:active {
+    box-shadow: var(--elevation-level-3) !important;
+    transition: none;
+}
 
-    .fab--color-tonal-primary:active {
-        background-color: var(--md-sys-color-on-primary-container);
-    }
-
-    .fab--color-tonal-secondary:active {
-        background-color: var(--md-sys-color-on-secondary-container);
-    }
-
-    .fab--color-tonal-tertiary:active {
-        background-color: var(--md-sys-color-on-tertiary-container);
-    }
-
-    .fab--color-primary:active {
-        background-color: var(--md-sys-color-on-primary);
-    }
-
-    .fab--color-secondary:active {
-        background-color: var(--md-sys-color-on-secondary);
-    }
-
-    .fab--color-tertiary:active {
-        background-color: var(--md-sys-color-on-tertiary);
-    }
-
-    .fab--color-tonal-primary:active,
-    .fab--color-tonal-secondary:active,
-    .fab.tonal-tertiary:active {
-        color: var(--md-sys-color-inverse-on-surface);
-    }
-
-    .fab--color-primary:active,
-    .fab--color-secondary:active,
-    .fab--color-tertiary:active {
-        color: var(--md-sys-color-on-surface);
-    }
+.fab::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0;
+    transition:
+        opacity var(--md-sys-motion-spring-standard-slow-effects);
 
 }
 
-@media (hover: hover) {
+@media (hover:hover) {
     .fab:hover {
         box-shadow: var(--elevation-level-4);
     }
 
-    .fab--color-tonal-primary:hover {
-        background-color: var(--md-sys-color-on-primary-container);
+    .fab:hover::before {
+        opacity: 0.08;
     }
+}
 
-    .fab--color-tonal-secondary:hover {
-        background-color: var(--md-sys-color-on-secondary-container);
-    }
+.fab:active:before {
+    opacity: 0.1;
+    transition: none;
+}
 
-    .fab--color-tonal-tertiary:hover {
-        background-color: var(--md-sys-color-on-tertiary-container);
-    }
+.fab--size-base::before {
+    border-radius: var(--md-sys-shape-corner-large);
+}
 
-    .fab--color-primary:hover {
-        background-color: var(--md-sys-color-on-primary);
-    }
+.fab--size-medium::before {
+    border-radius: var(--md-sys-shape-corner-large-increased);
+}
 
-    .fab--color-secondary:hover {
-        background-color: var(--md-sys-color-on-secondary);
-    }
+.fab--size-large::before {
+    border-radius: var(--md-sys-shape-corner-extra-large);
+}
 
-    .fab--color-tertiary:hover {
-        background-color: var(--md-sys-color-on-tertiary);
-    }
+.fab--color-tonal-primary::before {
+    background-color: var(--md-sys-color-on-primary-container);
+}
 
-    .fab--color-tonal-primary:hover,
-    .fab--color-tonal-secondary:hover,
-    .fab--color-tonal-tertiary:hover {
-        color: var(--md-sys-color-inverse-on-surface);
-    }
+.fab--color-tonal-secondary::before {
+    background-color: var(--md-sys-color-on-secondary-container);
+}
 
-    .fab--color-primary:hover,
-    .fab--color-secondary:hover,
-    .fab--color-tertiary:hover {
-        color: var(--md-sys-color-on-surface);
-    }
+.fab--color-tonal-tertiary::before {
+    background-color: var(--md-sys-color-on-tertiary-container);
+}
 
-    .fab:active {
-        background-color: var(--md-sys-color-surface) !important;
-        color: var(--md-sys-color-on-surface) !important;
-        transition: none;
-    }
+.fab--color-primary::before {
+    background-color: var(--md-sys-color-on-primary);
+}
+
+.fab--color-secondary::before {
+    background-color: var(--md-sys-color-on-secondary);
+}
+
+.fab--color-tertiary::before {
+    background-color: var(--md-sys-color-on-tertiary);
 }

@@ -5,9 +5,10 @@
     margin-right: auto;
     padding-left: 16px;
     padding-right: 16px;
-    transition: width 1s ease, opacity 1s ease;
     overflow: hidden;
     border-radius: var(--md-sys-shape-corner-medium);
+    transition:
+        width var(--md-sys-motion-spring-expressive-slow-spatial);
 }
 
 /* For compact and medium window classes */

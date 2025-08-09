@@ -6,7 +6,6 @@
     align-items: center;
     width: fit-content;
     margin: 24px auto;
-    transition: border-radius 250ms ease-in-out;
 }
 
 /* || Button - Size */
@@ -165,104 +164,73 @@
     margin-right: 16px;
 }
 
-/* || Button - State */
+/* || Button - States */
 
-@media (hover:none) {
-    .button {
-        transition: background-color 250ms ease-in-out, color 250ms ease-in-out, border-radius 250ms ease-in-out;
-    }
+.button {
+    position: relative;
+    transition:
+        border-radius var(--md-sys-motion-spring-standard-slow-effects);
+}
 
-    .button:active {
-        transition: none;
-    }
+.button:active {
+    transition: none;
+}
 
-    .button--color-elevated:active {
-        background-color: var(--md-sys-color-primary);
-        color: var(--md-sys-color-inverse-on-surface);
-    }
-
-    .button--color-filled:active {
-        background-color: var(--md-sys-color-on-primary);
-        color: var(--md-sys-color-on-surface);
-    }
-
-    .button--color-tonal:active {
-        background-color: var(--md-sys-color-on-secondary-container);
-        color: var(--md-sys-color-inverse-on-surface);
-    }
-
-    .button--color-outlined:active {
-        background-color: var(--md-sys-color-on-surface-variant);
-        color: var(--md-sys-color-inverse-on-surface);
-    }
-
-    .button--color-text:active {
-        background-color: var(--md-sys-color-primary);
-        color: var(--md-sys-color-inverse-on-surface);
-    }
-
-    .button--size-xs:active,
-    .button--size-s:active {
-        border-radius: var(--md-sys-shape-corner-small) !important;
-    }
-
-    .button--size-m:active {
-        border-radius: var(--md-sys-shape-corner-medium) !important;
-    }
-
-    .button--size-l:active,
-    .button--size-xl:active {
-        border-radius: var(--md-sys-shape-corner-large) !important;
-    }
+.button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    transition:
+        opacity var(--md-sys-motion-spring-standard-slow-effects);
 }
 
 @media (hover:hover) {
-    .button {
-        transition: background-color 250ms ease-in-out, color 250ms ease-in-out, border-radius 250ms ease-in-out;
-    }
-
-    .button--color-elevated:hover {
-        background-color: var(--md-sys-color-primary);
-        color: var(--md-sys-color-inverse-on-surface);
-    }
-
-    .button--color-filled:hover {
-        background-color: var(--md-sys-color-on-primary);
-        color: var(--md-sys-color-on-surface);
-    }
-
-    .button--color-tonal:hover {
-        background-color: var(--md-sys-color-on-secondary-container);
-        color: var(--md-sys-color-inverse-on-surface);
-    }
-
-    .button--color-outlined:hover {
-        background-color: var(--md-sys-color-on-surface-variant);
-        color: var(--md-sys-color-inverse-on-surface);
-    }
-
-    .button--color-text:hover {
-        background-color: var(--md-sys-color-primary);
-        color: var(--md-sys-color-inverse-on-surface);
-    }
-
-    .button:active {
-        background-color: var(--md-sys-color-surface) !important;
-        color: var(--md-sys-color-on-surface) !important;
-        transition: none;
+    .button:hover::before {
+        opacity: 0.08;
     }
 
     .button--size-xs:active,
     .button--size-s:active {
-        border-radius: var(--md-sys-shape-corner-small) !important;
+        border-radius: var(--md-sys-shape-corner-small);
     }
 
     .button--size-m:active {
-        border-radius: var(--md-sys-shape-corner-medium) !important;
+        border-radius: var(--md-sys-shape-corner-medium);
     }
 
     .button--size-l:active,
     .button--size-xl:active {
-        border-radius: var(--md-sys-shape-corner-large) !important;
+        border-radius: var(--md-sys-shape-corner-large);
     }
+}
+
+.button:active:before {
+    opacity: 0.1;
+    transition: none;
+}
+
+.button--color-elevated::before {
+    background-color: var(--md-sys-color-primary);
+}
+
+.button--color-filled::before {
+    background-color: var(--md-sys-color-on-primary);
+}
+
+.button--color-tonal::before {
+    background-color: var(--md-sys-color-on-secondary-container);
+}
+
+.button--color-outlined::before {
+    background-color: var(--md-sys-color-on-surface-variant);
+}
+
+.button--color-text::before {
+    background-color: var(--md-sys-color-primary);
 }

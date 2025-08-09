@@ -8,14 +8,16 @@
   /* Firefox */
   -ms-overflow-style: none;
   /* IE and Edge */
+  min-height: 64px;
   width: 100%;
   bottom: 0;
-  min-height: 64px;
+  padding-bottom: env(safe-area-inset-bottom);
   box-shadow: var(--elevation-level-2);
   background-color: var(--md-sys-color-surface-container);
   transform: translateY(0);
-  transition: transform 0.5s ease;
-  padding-bottom: env(safe-area-inset-bottom)
+  transition:
+    transform var(--md-sys-motion-spring-standard-slow-spatial),
+    box-shadow var(--md-sys-motion-spring-standard-slow-effects);
 }
 
 :host::-webkit-scrollbar {
@@ -89,55 +91,34 @@
     color: var(--md-sys-color-on-secondary-container);
   }
 
-  @media (hover:none) {
-    .navigation-bar__item-icon {
-      transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
-    }
+  .navigation-bar__item-icon {
+    position: relative;
+  }
 
-    .navigation-bar__item-label-text {
-      transition: color 250ms ease-in-out;
-    }
-
-    .navigation-bar__item:not(.navigation-bar__item--active):active .navigation-bar__item-icon {
-      background-color: var(--md-sys-color-on-secondary-container);
-      color: var(--md-sys-color-inverse-on-surface);
-      transition: none;
-    }
-
-    .navigation-bar__item:not(.navigation-bar__item--active):active .navigation-bar__item-label-text {
-      color: var(--md-sys-color-on-surface);
-      transition: none;
-    }
+  .navigation-bar__item-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--md-sys-color-on-secondary-container);
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    transition:
+      opacity var(--md-sys-motion-spring-standard-slow-effects);
   }
 
   @media (hover:hover) {
-    .navigation-bar__item-icon {
-      transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+    .navigation-bar__item:hover .navigation-bar__item-icon::before {
+      opacity: 0.08;
     }
+  }
 
-    .navigation-bar__item-label-text {
-      transition: color 250ms ease-in-out;
-    }
-
-    .navigation-bar__item:not(.navigation-bar__item--active):hover .navigation-bar__item-icon {
-      background-color: var(--md-sys-color-on-secondary-container);
-      color: var(--md-sys-color-inverse-on-surface);
-    }
-
-    .navigation-bar__item:not(.navigation-bar__item--active):hover .navigation-bar__item-label-text {
-      color: var(--md-sys-color-on-surface);
-    }
-
-    .navigation-bar__item:not(.navigation-bar__item--active):active .navigation-bar__item-icon {
-      background-color: var(--md-sys-color-surface);
-      color: var(--md-sys-color-on-surface);
-      transition: none;
-    }
-
-    .navigation-bar__item:not(.navigation-bar__item--active):active .navigation-bar__item-label-text {
-      color: var(--md-sys-color-on-surface);
-      transition: none;
-    }
+  .navigation-bar__item:active .navigation-bar__item-icon::before {
+    opacity: 0.1;
+    transition: none;
   }
 }
 
@@ -169,33 +150,34 @@
     height: 32px;
   }
 
-  @media (hover:none) {
-    .navigation-bar__item {
-      transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
-    }
+  .navigation-bar__item {
+    position: relative;
+  }
 
-    .navigation-bar__item:not(.navigation-bar__item--active):active {
-      background-color: var(--md-sys-color-on-secondary-container);
-      color: var(--md-sys-color-inverse-on-surface);
-      transition: none;
-    }
+  .navigation-bar__item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--md-sys-color-on-secondary-container);
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    transition:
+      opacity var(--md-sys-motion-spring-standard-slow-effects);
   }
 
   @media (hover:hover) {
-    .navigation-bar__item {
-      transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+    .navigation-bar__item:hover::before {
+      opacity: 0.08;
     }
+  }
 
-    .navigation-bar__item:not(.navigation-bar__item--active):hover {
-      background-color: var(--md-sys-color-on-secondary-container);
-      color: var(--md-sys-color-inverse-on-surface);
-    }
-
-    .navigation-bar__item:not(.navigation-bar__item--active):active {
-      background-color: var(--md-sys-color-surface);
-      color: var(--md-sys-color-on-surface);
-      transition: none;
-    }
+  .navigation-bar__item:active::before {
+    opacity: 0.1;
+    transition: none;
   }
 }
 

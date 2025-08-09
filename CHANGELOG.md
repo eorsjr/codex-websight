@@ -1,3 +1,37 @@
+# [2.0.0-rc.8](https://github.com/eorsjr/codex-websight/compare/v2.0.0-rc.7...v2.0.0-rc.8) (2025-08-09)
+
+
+### Bug Fixes
+
+* **fab:** :bug: fix positioning ([3ca737a](https://github.com/eorsjr/codex-websight/commit/3ca737a4a907f6c404c24192ccd3eaf40e49ff5a))
+* **navigation-bar:** :bug: fix navigation item spacing ([61963d4](https://github.com/eorsjr/codex-websight/commit/61963d47b73c6cbefc7b816496917948949d5ed0))
+* **navigation-bar:** :bug: update z-index ([066d6f5](https://github.com/eorsjr/codex-websight/commit/066d6f57b6c7b69fbe32fa76ce81e64f295f041e))
+
+
+### Code Refactoring
+
+* :truck: rename ScrollingService to ScrollService ([82b6b15](https://github.com/eorsjr/codex-websight/commit/82b6b158d4b4613402cabf6ee330ab674ed8989d))
+* **theme:** :truck: rename functions in ThemeService ([bfef99b](https://github.com/eorsjr/codex-websight/commit/bfef99bfae23cef45fcddd86b5e20634bab4ec59))
+
+
+### Features
+
+* **animation:** :dizzy: use motion tokens and state layers ([c9cbfe6](https://github.com/eorsjr/codex-websight/commit/c9cbfe605905f1e43f9ff642b3abc2b19fceb124))
+* **tokens:** :sparkles: introduce motion tokens ([67e96ca](https://github.com/eorsjr/codex-websight/commit/67e96ca8615c0afb6be7b8d45008c2eb42fcbfeb))
+
+
+### BREAKING CHANGES
+
+* **theme:** The ThemeService has been refactored. The following functions have been renamed:
+
+- `setInitialTheme()` is now `initColorPalette()`
+- `setIntitialFont()` is now `initFont()`
+- `setIntialColorScheme()` is now `initColorScheme()`
+- `switchToTheme()` is now `switchToColorPalette()`
+* ScrollingService has been renamed to ScrollService.
+
+
+
 # [2.0.0-rc.7](https://github.com/eorsjr/codex-websight/compare/v2.0.0-rc.6...v2.0.0-rc.7) (2025-08-05)
 
 

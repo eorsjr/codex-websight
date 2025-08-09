@@ -11,20 +11,13 @@
 }
 
 .fab--hidden {
-    transform: translateY(400%);
+    transform: translateY(calc(100% + 64px + 16px + env(safe-area-inset-bottom)));
 }
 
 /* For compact and medium window classes */
 @media screen and (max-width: 839px) {
     .fab {
-        bottom: calc(64px + 16px);
-    }
-
-    /* For standalone mode */
-    @media (display-mode:standalone) {
-        .fab {
-            margin-bottom: env(safe-area-inset-bottom);
-        }
+        bottom: calc(64px + 16px + env(safe-area-inset-bottom));
     }
 }
 

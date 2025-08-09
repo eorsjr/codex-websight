@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1754764630853,
+  "timestamp": 1754765544269,
   "index": "/codex-websight/index.html",
   "assetGroups": [
     {
@@ -51,7 +51,7 @@
     "/codex-websight/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
     "/codex-websight/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
     "/codex-websight/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
-    "/codex-websight/index.html": "7dcdb42fcb280a4fddb113b8cd48aa2c3ea2ff14",
+    "/codex-websight/index.html": "ba50e3941c0f92f488dc1820c770d35a65b3efc6",
     "/codex-websight/main-D3RFR3MZ.js": "3a7a37037c4c0d6d877922111068381c8ff57d07",
     "/codex-websight/manifest.webmanifest": "10359a930cb22fc76535cdbe0a8b5944a597b396",
     "/codex-websight/polyfills-FFHMD2TL.js": "f49b49a155bc7d192db62a4c15d0a612b460a667",

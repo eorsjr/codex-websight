@@ -1,4 +1,4 @@
-# [2.0.0-rc.9](https://github.com/eorsjr/codex-websight/compare/v2.0.0-rc.8...v2.0.0-rc.9) (2025-08-10)
+# [2.0.0](https://github.com/eorsjr/codex-websight/compare/v1.0.0...v2.0.0) (2025-08-10)
 
 
 ### Features
@@ -9,7 +9,7 @@
 
 
 
-# [2.0.0-rc.8](https://github.com/eorsjr/codex-websight/compare/v2.0.0-rc.7...v2.0.0-rc.8) (2025-08-09)
+# 2.0.0-rc.8 (2025-08-09)
 
 
 ### Bug Fixes
@@ -43,7 +43,7 @@
 
 
 
-# [2.0.0-rc.7](https://github.com/eorsjr/codex-websight/compare/v2.0.0-rc.6...v2.0.0-rc.7) (2025-08-05)
+# 2.0.0-rc.7 (2025-08-05)
 
 
 ### Bug Fixes
@@ -53,7 +53,7 @@
 
 
 
-# [2.0.0-rc.6](https://github.com/eorsjr/codex-websight/compare/v2.0.0-rc.5...v2.0.0-rc.6) (2025-08-04)
+# 2.0.0-rc.6 (2025-08-04)
 
 
 ### Bug Fixes
@@ -73,11 +73,11 @@
 
 
 
-# [2.0.0-rc.5](https://github.com/eorsjr/codex-websight/compare/v2.0.0-rc.4...v2.0.0-rc.5) (2025-08-03)
+# 2.0.0-rc.5 (2025-08-03)
 
 
 
-# [2.0.0-rc.4](https://github.com/eorsjr/codex-websight/compare/v2.0.0-rc.3...v2.0.0-rc.4) (2025-08-03)
+# 2.0.0-rc.4 (2025-08-03)
 
 
 ### Code Refactoring
@@ -103,25 +103,25 @@
 
 
 
-# [2.0.0-rc.3](https://github.com/eorsjr/codex-websight/compare/v2.0.0-rc.2...v2.0.0-rc.3) (2025-08-02)
+# 2.0.0-rc.3 (2025-08-02)
 
 
 ### Bug Fixes
 
-* **buttons:** :pencil2: replace common-button with button ([0b71323](https://github.com/eorsjr/codex-websight/commit/0b71323c838ae3c6da0fcca2b9625f1c60d9594b))
-* **card:** :bug: add border-radius to clickable-image ([910dd82](https://github.com/eorsjr/codex-websight/commit/910dd822e36b5e17f430d6ffbf90f035e1c5ae10))
+* **buttons:** :pencil2: replace common-button with button ([3b35dde](https://github.com/eorsjr/codex-websight/commit/3b35dde79643a68570d25cf59e87792e689028a7))
+* **card:** :bug: add border-radius to clickable-image ([4acf20d](https://github.com/eorsjr/codex-websight/commit/4acf20d6d0f7a55fde0302a1d7047aa1f77d8d76))
 
 
 ### Code Refactoring
 
-* **elevation:** :fire: remove ElevationService ([92a38a7](https://github.com/eorsjr/codex-websight/commit/92a38a7fc49cff0e38c6d05104fb1125d443825a))
-* **layout:** :zap: refine scrolling with fixed body and scrollable pane ([4e82f2f](https://github.com/eorsjr/codex-websight/commit/4e82f2f58de2e98ccbb5f378fa33121bb5f0041e))
+* **elevation:** :fire: remove ElevationService ([0e8717e](https://github.com/eorsjr/codex-websight/commit/0e8717e9e73f1c24a4784bf7d1addbe586bd4dbc))
+* **layout:** :zap: refine scrolling with fixed body and scrollable pane ([90e4c05](https://github.com/eorsjr/codex-websight/commit/90e4c05c3e426f41e0d080b6c71f32647bc90506))
 
 
 ### Features
 
-* **lightbox:** :lipstick: set text color to white ([4882eb5](https://github.com/eorsjr/codex-websight/commit/4882eb5f3447bf375f6cfcf5fe3def5b3d99c645))
-* **scrim:** remove blur effect ([f16d6dc](https://github.com/eorsjr/codex-websight/commit/f16d6dc0e1851a8ced0ca544ced027bc9a06b8e8))
+* **lightbox:** :lipstick: set text color to white ([dad268f](https://github.com/eorsjr/codex-websight/commit/dad268f579705b3c091a070070998cf5edaaf752))
+* **scrim:** remove blur effect ([4748ef6](https://github.com/eorsjr/codex-websight/commit/4748ef6373d2125e0756f0299c8140214e996e19))
 
 
 ### BREAKING CHANGES
@@ -134,27 +134,27 @@
 
 
 
-# [2.0.0-rc.2](https://github.com/eorsjr/codex-websight/compare/v2.0.0-rc.1...v2.0.0-rc.2) (2025-07-26)
+# 2.0.0-rc.2 (2025-08-02)
 
 
 ### Bug Fixes
 
-* **FAB:** :lipstick: adjust icon size for large FAB ([fdee818](https://github.com/eorsjr/codex-websight/commit/fdee8182eda8840756336cb61ef284ced0a6eeca))
+* **FAB:** :lipstick: adjust icon size for large FAB ([64c0f6d](https://github.com/eorsjr/codex-websight/commit/64c0f6d91110891dc1a776951ed6800ebdcfd6d1))
 
 
 ### Features
 
-* **card:** :lipstick: add border-radius to card images ([41a652a](https://github.com/eorsjr/codex-websight/commit/41a652a2212707c2081e441c57d3210883b1a06e))
+* **card:** :lipstick: add border-radius to card images ([bc6ec5e](https://github.com/eorsjr/codex-websight/commit/bc6ec5eca66873aa5d91c010254eab279c889ec2))
 
 
 
-# [2.0.0-rc.1](https://github.com/eorsjr/codex-websight/compare/v2.0.0-beta.2...v2.0.0-rc.1) (2025-07-19)
+# 2.0.0-rc.1 (2025-08-02)
 
 
 ### Code Refactoring
 
-* **components:** :art: use descriptive BEM modifiers for visibility ([da8d25b](https://github.com/eorsjr/codex-websight/commit/da8d25b51b266b4df370b55044cce808744c263a))
-* **scrim:** :building_construction: centralize scrim logic into a generic service ([65ba92d](https://github.com/eorsjr/codex-websight/commit/65ba92d5cd0f7f19549704f0a894b6b0afe080b2))
+* **components:** :art: use descriptive BEM modifiers for visibility ([44267da](https://github.com/eorsjr/codex-websight/commit/44267da9ae8b0a88f846da965e48c6aeb110af58))
+* **scrim:** :building_construction: centralize scrim logic into a generic service ([7d1377d](https://github.com/eorsjr/codex-websight/commit/7d1377deac66b5d7cb77da00722bfcd51d9641f8))
 
 
 ### BREAKING CHANGES
@@ -164,13 +164,13 @@
 
 
 
-# [2.0.0-beta.2](https://github.com/eorsjr/codex-websight/compare/v2.0.0-beta.1...v2.0.0-beta.2) (2025-07-17)
+# 2.0.0-beta.2 (2025-08-02)
 
 
 ### Code Refactoring
 
-* **components:** :art: adopt BEM naming convention ([f1dcf3c](https://github.com/eorsjr/codex-websight/commit/f1dcf3c3d6c5dcc788e927b83a8834f268d2b6a5))
-* **navigation:** :art: overhaul component structure and adopt BEM ([94703e5](https://github.com/eorsjr/codex-websight/commit/94703e5d9e394a120d671d782fea40b0c0009f93))
+* **components:** :art: adopt BEM naming convention ([929f8e9](https://github.com/eorsjr/codex-websight/commit/929f8e9fd66bb7937563e2eb182c489a23ebb09f))
+* **navigation:** :art: overhaul component structure and adopt BEM ([d531fbf](https://github.com/eorsjr/codex-websight/commit/d531fbf9a73a52c41a65d01f5c6df936895f5190))
 
 
 ### BREAKING CHANGES
@@ -184,34 +184,34 @@
 
 
 
-# [2.0.0-beta.1](https://github.com/eorsjr/codex-websight/compare/v2.0.0-alpha.2...v2.0.0-beta.1) (2025-07-15)
+# 2.0.0-beta.1 (2025-08-02)
 
 
 ### Bug Fixes
 
-* **lightbox:** :bug: remove scroll control from lightbox service ([07954e8](https://github.com/eorsjr/codex-websight/commit/07954e8faeec678aa9aed48ede69e249fda8ae59))
-* **lightbox:** :bug: reset current image index on lightbox close ([b6dffac](https://github.com/eorsjr/codex-websight/commit/b6dffac55c44c0f486b1b61ffe9f6d6038c682c8))
-* **lightbox:** :bug: reset images array on lightbox close ([2da159a](https://github.com/eorsjr/codex-websight/commit/2da159a3a8737bb1819fdefcfe969017382548a7))
-* **scrim:** :bug: toggle scrolling based on scrim visibility ([e8528c2](https://github.com/eorsjr/codex-websight/commit/e8528c21fce9bb3c4e8df5b16f2e04203f28606b))
+* **lightbox:** :bug: remove scroll control from lightbox service ([c792d36](https://github.com/eorsjr/codex-websight/commit/c792d3625639be78fc353e86bdb33df1f5f09bad))
+* **lightbox:** :bug: reset current image index on lightbox close ([b7ad899](https://github.com/eorsjr/codex-websight/commit/b7ad899cdde58924d8d89c82cd74f52d20a752d4))
+* **lightbox:** :bug: reset images array on lightbox close ([414e9dd](https://github.com/eorsjr/codex-websight/commit/414e9ddd221adf97c444f86684e56bdaf99ff537))
+* **scrim:** :bug: toggle scrolling based on scrim visibility ([98f5cb4](https://github.com/eorsjr/codex-websight/commit/98f5cb44286c4555709cd06e1be11d9a9de0f721))
 
 
 
-# [2.0.0-alpha.2](https://github.com/eorsjr/codex-websight/compare/v2.0.0-alpha.1...v2.0.0-alpha.2) (2025-07-13)
+# 2.0.0-alpha.2 (2025-08-02)
 
 
 ### Bug Fixes
 
-* **navigation:** :bug: hide scrim before closing the navigation rail ([15837c6](https://github.com/eorsjr/codex-websight/commit/15837c6e079e26343082e6e342e12204aa540fa6))
+* **navigation:** :bug: hide scrim before closing the navigation rail ([028c1fd](https://github.com/eorsjr/codex-websight/commit/028c1fd814fc10580720b3da5e92dc414e553fce))
 
 
 ### Features
 
-* :lipstick: update color tokens ([e8d49b2](https://github.com/eorsjr/codex-websight/commit/e8d49b24b6ae13f3813e0d40393db2aa9599be2c))
-* :sparkles: introduce basic dialog component ([6bf69f3](https://github.com/eorsjr/codex-websight/commit/6bf69f3bfcdd3b3a68ab068618615cc2b2f388e2))
-* **App Bar:** :sparkles: add basic dialogs to switch theme and font ([de85a3e](https://github.com/eorsjr/codex-websight/commit/de85a3e7636eecfea13d739477d760ea76c0c8ad))
-* **buttons:** :lipstick: update color animations ([df96d81](https://github.com/eorsjr/codex-websight/commit/df96d8136531f24d08a5b40c924181870dc8e907))
-* **buttons:** :sparkles: introduce FAB (floating action button) component ([7e5d629](https://github.com/eorsjr/codex-websight/commit/7e5d629fad20269adc0330267a68817cc662f2a9))
-* **FAB:** :sparkles: add scroll to top FAB ([e4f1d95](https://github.com/eorsjr/codex-websight/commit/e4f1d95f63186c7d4c76deaa6be23640d3a80efa))
+* :lipstick: update color tokens ([1a54b31](https://github.com/eorsjr/codex-websight/commit/1a54b312d7f64fb93f15f3a7e0f978a2e4aa5c1c))
+* :sparkles: introduce basic dialog component ([318144f](https://github.com/eorsjr/codex-websight/commit/318144f9ac870d3c8343d938471c14b641bab323))
+* **App Bar:** :sparkles: add basic dialogs to switch theme and font ([e17bca7](https://github.com/eorsjr/codex-websight/commit/e17bca7a57909e53dc4399e5c5fd4a85afc200b1))
+* **buttons:** :lipstick: update color animations ([bd54138](https://github.com/eorsjr/codex-websight/commit/bd541386b1530a4cc480b4d69e753408a17287e5))
+* **buttons:** :sparkles: introduce FAB (floating action button) component ([c7b63eb](https://github.com/eorsjr/codex-websight/commit/c7b63eb6c9642acc214d4c82d409c3383199f725))
+* **FAB:** :sparkles: add scroll to top FAB ([1c57c7c](https://github.com/eorsjr/codex-websight/commit/1c57c7cd1f5bba4609c4bc4b6de1bfd6731cf9c6))
 
 
 ### BREAKING CHANGES
@@ -220,18 +220,18 @@
 
 
 
-# [2.0.0-alpha.1](https://github.com/eorsjr/codex-websight/compare/v1.0.0...v2.0.0-alpha.1) (2025-07-10)
+# 2.0.0-alpha.1 (2025-08-02)
 
 
 ### Bug Fixes
 
-* **seo:** :memo: add missing meta description to index.html ([200c264](https://github.com/eorsjr/codex-websight/commit/200c2649fc7140ce604e7e83757f491ba5a7cbc9))
+* **seo:** :memo: add missing meta description to index.html ([cea768c](https://github.com/eorsjr/codex-websight/commit/cea768c0baebf7bf2338289cfe467c359436127e))
 
 
 ### Code Refactoring
 
-* :recycle: flatten component DOM + update styling hooks ([7498ced](https://github.com/eorsjr/codex-websight/commit/7498cedd693b2cb7f8b11cd171fd8231933ccb2a))
-* :recycle: replace eui- component selectors with cxw- ([b5cb82d](https://github.com/eorsjr/codex-websight/commit/b5cb82dbf8be5bf506f46b50434d7a10de1d31da))
+* :recycle: flatten component DOM + update styling hooks ([79df9e4](https://github.com/eorsjr/codex-websight/commit/79df9e4a99d304ac3d2c35bc956a9fcb8aa6839d))
+* :recycle: replace eui- component selectors with cxw- ([3ea10d4](https://github.com/eorsjr/codex-websight/commit/3ea10d4491ec640da43165480a45c43f5ee9c399))
 
 
 ### BREAKING CHANGES
@@ -242,6 +242,7 @@
 
 
 # [1.0.0](https://github.com/eorsjr/codex-websight/compare/c02957d60b2e1b27e1a4171f7833fae34b3ed37a...v1.0.0) (2025-07-06)
+
 
 :tada: First public release of **EUI Web**
 
@@ -265,3 +266,6 @@
 - `Toggle Color Palette`
 - `Toggle Color Scheme`
 - `Toggle Font`
+
+
+

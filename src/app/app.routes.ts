@@ -3,7 +3,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ComponentsComponent } from './pages/components/components.component';
 import { VisualsComponent } from './pages/visuals/visuals.component';
 import { ExtrasComponent } from './pages/extras/extras.component';
-import { ContactComponent } from './pages/contact/contact.component';
+import { NewsComponent } from './pages/news/news.component';
 
 export const routes: Routes = [
   {
@@ -27,8 +27,8 @@ export const routes: Routes = [
     title: 'Visuals - codeX WebSight'
   },
   {
-    path: 'contact',
-    component: ContactComponent,
-    title: 'Contact - codeX WebSight'
+    path: 'news',
+    component: NewsComponent,
+    title: 'News - codeX WebSight'
   }
 ];

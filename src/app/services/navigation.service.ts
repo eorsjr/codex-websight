@@ -26,7 +26,7 @@ export class NavigationService {
     { routerLink: '/components', icon: 'dashboard', label: 'Components', ariaLabel: 'Components', showOnBar: true },
     { routerLink: '/extras', icon: 'extension', label: 'Extras', ariaLabel: 'Extras', showOnBar: true },
     { routerLink: '/visuals', icon: 'photo', label: 'Visuals', ariaLabel: 'Visuals', showOnBar: true },
-    { routerLink: '/contact', icon: 'contact_page', label: 'Contact', ariaLabel: 'Contact', showOnBar: true },
+    { routerLink: '/news', icon: 'news', label: 'News', ariaLabel: 'News', showOnBar: true },
     {icon: 'stars', label: 'Label', ariaLabel: 'Label', showOnBar: false },
     {icon: 'stars', label: 'Label', ariaLabel: 'Label', showOnBar: false }
   ];

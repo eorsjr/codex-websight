@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1754767151379,
+  "timestamp": 1754814841817,
   "index": "/codex-websight/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/codex-websight/favicon.ico",
         "/codex-websight/index.html",
-        "/codex-websight/main-UYVU4VSE.js",
+        "/codex-websight/main-SPKYWUTA.js",
         "/codex-websight/manifest.webmanifest",
         "/codex-websight/polyfills-FFHMD2TL.js",
         "/codex-websight/styles-GRVZ2TA4.css"
@@ -51,8 +51,8 @@
     "/codex-websight/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
     "/codex-websight/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
     "/codex-websight/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
-    "/codex-websight/index.html": "cdfd619f4ad585dc51356239a56a3bdf37c22144",
-    "/codex-websight/main-UYVU4VSE.js": "0c2bb56ab509f989b29c2e806a04e30a789c8a26",
+    "/codex-websight/index.html": "17165f97cce20dbd8e0fdb5766043955742576c9",
+    "/codex-websight/main-SPKYWUTA.js": "8dd56777590b008bf1c8732281708533fcb1cb07",
     "/codex-websight/manifest.webmanifest": "10359a930cb22fc76535cdbe0a8b5944a597b396",
     "/codex-websight/polyfills-FFHMD2TL.js": "f49b49a155bc7d192db62a4c15d0a612b460a667",
     "/codex-websight/styles-GRVZ2TA4.css": "c8e157d24419dbc50b613813c3b1e0ced0b33f9b"

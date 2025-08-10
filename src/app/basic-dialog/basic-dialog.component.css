@@ -15,9 +15,22 @@
     min-width: 280px;
     max-width: 560px;
     padding: 24px;
-    
+    transform-origin: top;
+    transition:
+        opacity var(--md-sys-motion-spring-standard-default-effects),
+        transform var(--md-sys-motion-spring-expressive-slow-spatial);
+
     &[open] {
         display: flex;
+        opacity: 1;
+        transform: translateY(0) scaleY(1);
+    }
+
+    &:not([open]) {
+        display: flex;
+        pointer-events: none;
+        opacity: 0;
+        transform: translateY(-100px) scaleY(0);
     }
 }
 

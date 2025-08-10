@@ -1,33 +1,8 @@
-<button class="navigation-bar__item" aria-label="Home" routerLink="/" routerLinkActive="navigation-bar__item--active"
-    [routerLinkActiveOptions]="{ exact: true }" ariaCurrentWhenActive="page" (click)="scrollService.scrollToTop()">
-    <span class="material-symbols-outlined navigation-bar__item-icon">home</span>
-    <span class="navigation-bar__item-label-text">Home</span>
-</button>
-
-<button class="navigation-bar__item" aria-label="Components" routerLink="/components"
-    routerLinkActive="navigation-bar__item--active" ariaCurrentWhenActive="page"
-    (click)="scrollService.scrollToTop()">
-    <span class="material-symbols-outlined navigation-bar__item-icon">dashboard</span>
-    <span class="navigation-bar__item-label-text">Components</span>
-</button>
-
-<button class="navigation-bar__item" aria-label="Extras" routerLink="/extras"
-    routerLinkActive="navigation-bar__item--active" ariaCurrentWhenActive="page"
-    (click)="scrollService.scrollToTop()">
-    <span class="material-symbols-outlined navigation-bar__item-icon">extension</span>
-    <span class="navigation-bar__item-label-text">Extras</span>
-</button>
-
-<button class="navigation-bar__item" aria-label="Visuals" routerLink="/visuals"
-    routerLinkActive="navigation-bar__item--active" ariaCurrentWhenActive="page"
-    (click)="scrollService.scrollToTop()">
-    <span class="material-symbols-outlined navigation-bar__item-icon">photo</span>
-    <span class="navigation-bar__item-label-text">Visuals</span>
-</button>
-
-<button class="navigation-bar__item" aria-label="Contact" routerLink="/contact"
-    routerLinkActive="navigation-bar__item--active" ariaCurrentWhenActive="page"
-    (click)="scrollService.scrollToTop()">
-    <span class="material-symbols-outlined navigation-bar__item-icon">contact_page</span>
-    <span class="navigation-bar__item-label-text">Contact</span>
-</button>
+<ng-container *ngFor="let item of navService.navItems">
+    <button *ngIf="item.showOnBar" class="navigation-bar__item" [attr.aria-label]="item.ariaLabel"
+        [routerLink]="item.routerLink" routerLinkActive="navigation-bar__item--active"
+        [routerLinkActiveOptions]="{ exact: true }" ariaCurrentWhenActive="page" (click)="scrollService.scrollToTop()">
+        <span class="material-symbols-outlined navigation-bar__item-icon">{{ item.icon }}</span>
+        <span class="navigation-bar__item-label-text">{{ item.label }}</span>
+    </button>
+</ng-container>

@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1754820682597,
+  "timestamp": 1754822144178,
   "index": "/codex-websight/index.html",
   "assetGroups": [
     {
@@ -16,7 +16,7 @@
         "/codex-websight/main-CCVJE6EU.js",
         "/codex-websight/manifest.webmanifest",
         "/codex-websight/polyfills-FFHMD2TL.js",
-        "/codex-websight/styles-3B2SSN7F.css"
+        "/codex-websight/styles-LOKMPWPG.css"
       ],
       "patterns": []
     },
@@ -38,6 +38,7 @@
         "/codex-websight/icons/icon-96x96.png",
         "/codex-websight/media/anta-v1-latin-regular-6XCNYJGX.woff2",
         "/codex-websight/media/limelight-v20-latin-regular-RW6MSIYR.woff2",
+        "/codex-websight/media/material-symbols-outlined-7AX4O3AS.woff2",
         "/codex-websight/media/noto-sans-v39-latin-regular-JQKA64CT.woff2",
         "/codex-websight/media/pattaya-v17-latin-regular-6TKVJCOV.woff2"
       ],
@@ -55,15 +56,16 @@
     "/codex-websight/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
     "/codex-websight/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
     "/codex-websight/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
-    "/codex-websight/index.html": "67452b858696806dcd017ffb748349a64e37ddef",
+    "/codex-websight/index.html": "acbb550c18c8774e090dce66c21ce383c4719448",
     "/codex-websight/main-CCVJE6EU.js": "1c0e68a228973c98cb86410b09bedfd240f50da9",
     "/codex-websight/manifest.webmanifest": "10359a930cb22fc76535cdbe0a8b5944a597b396",
     "/codex-websight/media/anta-v1-latin-regular-6XCNYJGX.woff2": "395654bad8115870dc14488c3b56a8dafa3a7056",
     "/codex-websight/media/limelight-v20-latin-regular-RW6MSIYR.woff2": "b567295604303f300639484efdaa86398cf4203c",
+    "/codex-websight/media/material-symbols-outlined-7AX4O3AS.woff2": "da114daf7d24ca632d546db02cce93c7dc035f2e",
     "/codex-websight/media/noto-sans-v39-latin-regular-JQKA64CT.woff2": "cb817504b4bcdfb22c72138409ddf39cd22c8912",
     "/codex-websight/media/pattaya-v17-latin-regular-6TKVJCOV.woff2": "bc8c8a6ec66771a9b8ec2ccec77c4663dea1fd23",
     "/codex-websight/polyfills-FFHMD2TL.js": "f49b49a155bc7d192db62a4c15d0a612b460a667",
-    "/codex-websight/styles-3B2SSN7F.css": "10fe744f01661cb70d73bf89b71b64a2d24d6650"
+    "/codex-websight/styles-LOKMPWPG.css": "6a102eea470db3450d11f978641314783d617170"
   },
   "navigationUrls": [
     {

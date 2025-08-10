@@ -41,21 +41,16 @@ Additionally, features unrelated to MWC are also being developed to improve the 
 - **Image Grid**
 - **Lightbox**
 - **Slideshow**
-- **Toggle Color Palette**
+- **Switch Color Palette**
     - Available palettes:
         *silver, green, yellow, orange, pink, baseline, blue*
-        
-- **Toggle Color Scheme**
-    - Switch between light and dark mode.
 
-- **Toggle Font**
+- **Switch Font**
     - Available fonts:
         *Noto Sans, Anta, Limelight, Pattaya*
 
-### Planned Features
-No additional features are currently planned.
-
-<!-- ## Currently in Development -->
+- **Toggle Color Scheme**
+    - Toggle between light and dark mode.
 
 ## Related Projects
 

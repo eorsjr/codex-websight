@@ -1,3 +1,14 @@
+# [2.0.0-rc.9](https://github.com/eorsjr/codex-websight/compare/v2.0.0-rc.8...v2.0.0-rc.9) (2025-08-10)
+
+
+### Features
+
+* **dialog:** :dizzy: add animated transitions ([d30278c](https://github.com/eorsjr/codex-websight/commit/d30278ce8073d939b3876438970423baa76a59eb))
+* **fonts:** :zap: self-host web fonts for performance ([6eb0cc8](https://github.com/eorsjr/codex-websight/commit/6eb0cc80ec4e34de446724be419ae9694f5c8c81))
+* **navigation:** :sparkles: centralize navigation item management ([fb66105](https://github.com/eorsjr/codex-websight/commit/fb6610521465ae5cb9117309cd0e39a59c43cb43))
+
+
+
 # [2.0.0-rc.8](https://github.com/eorsjr/codex-websight/compare/v2.0.0-rc.7...v2.0.0-rc.8) (2025-08-09)
 
 

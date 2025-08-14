@@ -1,8 +1,8 @@
 <cxw-icon-button class="lightbox__close-button" color="filled" size="m" icon="close" role="button"
   aria-label="Close Lightbox" (click)="closeLightbox()" />
-<cxw-icon-button class="lightbox__previous-button" color="tonal" size="s" icon="arrow_back" role="button"
+<cxw-icon-button *ngIf="lightboxService.images().length > 1" class="lightbox__previous-button" color="tonal" size="s" icon="arrow_back" role="button"
   aria-label="Previous" (click)="showPreviousImage()" />
-<cxw-icon-button class="lightbox__next-button" color="tonal" size="s" icon="arrow_forward" role="button"
+<cxw-icon-button *ngIf="lightboxService.images().length > 1" class="lightbox__next-button" color="tonal" size="s" icon="arrow_forward" role="button"
   aria-label="Next" (click)="showNextImage()" />
 <ng-container *ngIf="lightboxService.currentImage() as img">
   <img class="lightbox__image" [src]="img.src" [alt]="img.alt || ''" [class.lightbox__image--fade-in]="loaded"

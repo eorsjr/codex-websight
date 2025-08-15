@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1754847779229,
+  "timestamp": 1755288778678,
   "index": "/codex-websight/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/codex-websight/favicon.ico",
         "/codex-websight/index.html",
-        "/codex-websight/main-GMOWDJUI.js",
+        "/codex-websight/main-BTBBK7UE.js",
         "/codex-websight/manifest.webmanifest",
         "/codex-websight/polyfills-FFHMD2TL.js",
         "/codex-websight/styles-LOKMPWPG.css"
@@ -56,8 +56,8 @@
     "/codex-websight/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
     "/codex-websight/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
     "/codex-websight/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
-    "/codex-websight/index.html": "9226d535afd959438aec05425c9e05a0f343fd03",
-    "/codex-websight/main-GMOWDJUI.js": "1e981a6fbffe81095fcd1fabb3698cf7da724bfb",
+    "/codex-websight/index.html": "ce1a735d2625fc1f03f9b0a6c3e2faa184680383",
+    "/codex-websight/main-BTBBK7UE.js": "d9c9a192cc3b2e5db8a3c54e955357c421c4441f",
     "/codex-websight/manifest.webmanifest": "10359a930cb22fc76535cdbe0a8b5944a597b396",
     "/codex-websight/media/anta-v1-latin-regular-6XCNYJGX.woff2": "395654bad8115870dc14488c3b56a8dafa3a7056",
     "/codex-websight/media/limelight-v20-latin-regular-RW6MSIYR.woff2": "b567295604303f300639484efdaa86398cf4203c",

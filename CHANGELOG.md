@@ -1,3 +1,12 @@
+## [2.0.1](https://github.com/eorsjr/codex-websight/compare/v2.0.0...v2.0.1) (2025-08-15)
+
+
+### Bug Fixes
+
+* **lightbox:** :bug: hide arrow buttons if there is only one target ([05c4885](https://github.com/eorsjr/codex-websight/commit/05c4885a98beae5ff3d979bffecee0e8e3de7424))
+
+
+
 # [2.0.0](https://github.com/eorsjr/codex-websight/compare/v1.0.0...v2.0.0) (2025-08-10)
 
 
